@@ -35,7 +35,7 @@ Klicke auf <high>"Start Bootcamp"</high> auf Ilias!
 .pull-right5[
 
 <br><br>
-<iframe src="https://michaelschulte.github.io/RBootcamp_FS2021/" width="500" height="500"></iframe>
+<iframe src="`r noquote(baselink)`index.html" width="500" height="500"></iframe>
 
 ]
 
@@ -215,9 +215,9 @@ Chief Decision Scientist at Google
 .pull-right5[
 <br>
 
-  <iframe src="https://michaelschulte.github.io/RBootcamp_FS2021/_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
+  <iframe src="`r noquote(baselink)`_sessions/Data/Data_practical.html" height="480px" width = "500px"></iframe>
 
-  Beispiel:<a href="https://michaelschulte.github.io/RBootcamp_FS2021/_sessions/Data/Data_practical.html"> Daten </a>
+  Beispiel:<a href="`r noquote(baselink)`_sessions/Data/Data_practical.html"> Daten </a>
 
 ]
 
