@@ -40,7 +40,7 @@ source("_sessions/baselink.R")
 
 <h2>[Installation](installation.html)</h2>
 
-<h2>[Project + Datasets + Papers](`r noquote(baselink)`/materials/RDS_Project.zip)</h2>
+<h2>[Project + Datasets + Papers](`r noquote(baselink)`_materials/RDS_Project.zip)</h2>
 
 # Practicals
 

@@ -39,7 +39,7 @@ source("../baselink.R")
 ```
 
 <p align="center" width="100%">
-  <img src="`r noquote(baselink)`image/Big-data-slider_GEBI.jpg" alt="methodspace" style="width:100%;height:280px">
+  <img src="`r noquote(baselink)`/_sessions/Data/image/Big-data-slider_GEBI.jpeg" alt="methodspace" style="width:100%;height:280px">
   <br>
   <font style="font-size:10px">from <a href="https://www.methodspace.com">methodspace.com</a></font>
 </p>
