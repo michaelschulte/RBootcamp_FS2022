@@ -13,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Daten
-### <a href='https://rds_fs2022.netlify.app/'> Datascience mit R lernen </a>
+### <a href='https://rds-fs2022.netlify.app/'> Datascience mit R lernen </a>
 ### FS 2022
 
 ---
@@ -125,15 +125,15 @@ basel
 ```
 
 ```
-## # A tibble: 10,000 × 20
-##      id geschlecht alter groesse gewicht
-##   &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-## 1     1 F             87    165     NA  
-## 2     2 M             54    175.    85.6
-## 3     3 F             34    147.    53.9
-## 4     4 M             31    166.   105  
-## 5     5 M             24    180.   102. 
-## # … with 9,995 more rows
+# A tibble: 10,000 × 20
+     id geschlecht alter groesse gewicht
+  &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1     1 F             87    165     NA  
+2     2 M             54    175.    85.6
+3     3 F             34    147.    53.9
+4     4 M             31    166.   105  
+5     5 M             24    180.   102. 
+# … with 9,995 more rows
 ```
 ]
 
@@ -177,9 +177,9 @@ basel$alter
 ```
 
 ```
-##  [1] 87 54 34 31 24 59 48 53 50 62 73 53
-## [13] 38 26
-##  [ reached getOption("max.print") -- omitted 9986 entries ]
+ [1] 87 54 34 31 24 59 48 53 50 62 73 53
+[13] 38 26
+ [ reached getOption("max.print") -- omitted 9986 entries ]
 ```
 
 ```r
@@ -188,14 +188,14 @@ basel$bildung
 ```
 
 ```
-##  [1] "obligatorisch" "sek III"      
-##  [3] "sek III"       "lehre"        
-##  [5] "obligatorisch" "sek III"      
-##  [7] "obligatorisch" "lehre"        
-##  [9] "sek III"       "lehre"        
-## [11] "sek III"       "lehre"        
-## [13] "lehre"         "obligatorisch"
-##  [ reached getOption("max.print") -- omitted 9986 entries ]
+ [1] "obligatorisch" "sek III"      
+ [3] "sek III"       "lehre"        
+ [5] "obligatorisch" "sek III"      
+ [7] "obligatorisch" "lehre"        
+ [9] "sek III"       "lehre"        
+[11] "sek III"       "lehre"        
+[13] "lehre"         "obligatorisch"
+ [ reached getOption("max.print") -- omitted 9986 entries ]
 ```
 
 ]
@@ -221,15 +221,15 @@ basel
 ```
 
 ```
-## # A tibble: 10,000 × 20
-##      id geschlecht alter groesse gewicht
-##   &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-## 1     1 F             87    165     NA  
-## 2     2 M             54    175.    85.6
-## 3     3 F             34    147.    53.9
-## 4     4 M             31    166.   105  
-## 5     5 M             24    180.   102. 
-## # … with 9,995 more rows
+# A tibble: 10,000 × 20
+     id geschlecht alter groesse gewicht
+  &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1     1 F             87    165     NA  
+2     2 M             54    175.    85.6
+3     3 F             34    147.    53.9
+4     4 M             31    166.   105  
+5     5 M             24    180.   102. 
+# … with 9,995 more rows
 ```
 
 ]
@@ -285,7 +285,7 @@ alter
 
 
 ```
-##  [1] 87 54 34 31 24 59 48 53 50 62
+ [1] 87 54 34 31 24 59 48 53 50 62
 ```
 
 
@@ -295,7 +295,7 @@ alter[2]
 ```
 
 ```
-## [1] 54
+[1] 54
 ```
 
 
@@ -331,7 +331,7 @@ basel$alter
 
 
 ```
-##  [1] 87 54 34 31 24 59 48 53 50 62
+ [1] 87 54 34 31 24 59 48 53 50 62
 ```
 
 
@@ -341,7 +341,7 @@ class(basel$alter)
 ```
 
 ```
-## [1] "numeric"
+[1] "numeric"
 ```
 
 ```r
@@ -350,7 +350,7 @@ is.numeric(basel$alter)
 ```
 
 ```
-## [1] TRUE
+[1] TRUE
 ```
 
 ]
@@ -376,7 +376,7 @@ basel$geschlecht
 
 
 ```
-## [1] "F" "M" "F" "M" "M" "M" "F" "F"
+[1] "F" "M" "F" "M" "M" "M" "F" "F"
 ```
 
 
@@ -387,10 +387,10 @@ basel$bildung
 
 
 ```
-## [1] "obligatorisch" "sek III"      
-## [3] "sek III"       "lehre"        
-## [5] "obligatorisch" "sek III"      
-## [7] "obligatorisch" "lehre"
+[1] "obligatorisch" "sek III"      
+[3] "sek III"       "lehre"        
+[5] "obligatorisch" "sek III"      
+[7] "obligatorisch" "lehre"        
 ```
 
 
@@ -418,7 +418,7 @@ basel$alter
 
 
 ```
-##  [1] 87 54 34 31 24 59 48 53 50 62
+ [1] 87 54 34 31 24 59 48 53 50 62
 ```
 
 
@@ -429,8 +429,8 @@ as.character(basel$alter)
 
 
 ```
-##  [1] "87" "54" "34" "31" "24" "59" "48"
-##  [8] "53" "50" "62"
+ [1] "87" "54" "34" "31" "24" "59" "48"
+ [8] "53" "50" "62"
 ```
 
 ]
@@ -456,8 +456,8 @@ basel$geschlecht == "M"
 
 
 ```
-##  [1] FALSE  TRUE FALSE  TRUE  TRUE  TRUE
-##  [7] FALSE FALSE  TRUE FALSE
+ [1] FALSE  TRUE FALSE  TRUE  TRUE  TRUE
+ [7] FALSE FALSE  TRUE FALSE
 ```
 
 
@@ -468,8 +468,8 @@ basel$alter &lt; 30
 
 
 ```
-##  [1] FALSE FALSE FALSE FALSE  TRUE FALSE
-##  [7] FALSE FALSE FALSE FALSE
+ [1] FALSE FALSE FALSE FALSE  TRUE FALSE
+ [7] FALSE FALSE FALSE FALSE
 ```
 
 ]
@@ -619,15 +619,15 @@ basel
 ```
 
 ```
-## # A tibble: 10,000 × 20
-##      id geschlecht alter groesse
-##   &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;
-## 1     1 f             87    165 
-## 2     2 m             54    175.
-## 3     3 f             34    147.
-## 4     4 m             31    166.
-## 5     5 m             24    180.
-## # … with 9,995 more rows
+# A tibble: 10,000 × 20
+     id geschlecht alter groesse
+  &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;
+1     1 f             87    165 
+2     2 m             54    175.
+3     3 f             34    147.
+4     4 m             31    166.
+5     5 m             24    180.
+# … with 9,995 more rows
 ```
 
 ]
@@ -695,23 +695,6 @@ basel
 basel &lt;- read_csv("1_Data/basel.csv")
 ```
 
-```
-## Rows: 10000 Columns: 20
-```
-
-```
-## ── Column specification ────────────────
-## Delimiter: ","
-## chr  (5): geschlecht, bildung, konfe...
-## dbl (15): id, alter, groesse, gewich...
-```
-
-```
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
 ]
 
 .pull-right45[
@@ -777,7 +760,7 @@ dbListTables(con)
 ```
 
 ```
-## [1] "basel"
+[1] "basel"
 ```
 
 ]
@@ -808,17 +791,17 @@ basel
 ```
 
 ```
-## # Source:   table&lt;basel&gt; [?? x 20]
-## # Database: mysql 5.7.26-log-cll-lve
-## #   [@studie.ch:/studiech_rbootcamp]
-##      id geschlecht alter_jahre groesse
-##   &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt;
-## 1     1 f                   87    165 
-## 2     2 m                   54    175.
-## 3     3 f                   34    147.
-## 4     4 m                   31    166.
-## 5     5 m                   24    180.
-## # … with more rows
+# Source:   table&lt;basel&gt; [?? x 20]
+# Database: mysql 5.7.26-log-cll-lve
+#   [@studie.ch:/studiech_rbootcamp]
+     id geschlecht alter_jahre groesse
+  &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt;
+1     1 f                   87    165 
+2     2 m                   54    175.
+3     3 f                   34    147.
+4     4 m                   31    166.
+5     5 m                   24    180.
+# … with more rows
 ```
 
 ]
@@ -850,12 +833,12 @@ basel %&gt;% pull(konfession)
 ```
 
 ```
-##  [1] "katholisch"     "konfessionslos"
-##  [3] "konfessionslos" "katholisch"    
-##  [5] "katholisch"     NA              
-##  [7] "konfessionslos" "katholisch"    
-##  [9] "konfessionslos" "andere"        
-##  [ reached getOption("max.print") -- omitted 9990 entries ]
+ [1] "katholisch"     "konfessionslos"
+ [3] "konfessionslos" "katholisch"    
+ [5] "katholisch"     NA              
+ [7] "konfessionslos" "katholisch"    
+ [9] "konfessionslos" "andere"        
+ [ reached getOption("max.print") -- omitted 9990 entries ]
 ```
 
 ]
@@ -876,20 +859,20 @@ read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %&gt;%
 ```
 
 ```
-## # A tibble: 22 × 3
-##    Release Date         Description                                                       
-##    &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;                                                             
-##  1 0.16    ""           "This is the last alpha version developed primarily by Ihaka and …
-##  2 0.49    "1997-04-23" "This is the oldest source release which is currently available o…
-##  3 0.60    "1997-12-05" "R becomes an official part of the GNU Project. The code is hoste…
-##  4 0.65.1  "1999-10-07" "First versions of update.packages and install.packages functions…
-##  5 1.0     "2000-02-29" "Considered by its developers stable enough for production use.[5…
-##  6 1.4     "2001-12-19" "S4 methods are introduced and the first version for Mac OS X is …
-##  7 1.8     "2003-10-08" "Introduced a flexible condition handling mechanism for signallin…
-##  8 2.0     "2004-10-04" "Introduced lazy loading, which enables fast loading of data with…
-##  9 2.1     "2005-04-18" "Support for UTF-8 encoding, and the beginnings of internationali…
-## 10 2.6.2   "2008-02-08" "Last version to support Windows 95, 98, Me and NT 4.0[60]"       
-## # … with 12 more rows
+# A tibble: 22 × 3
+   Release Date         Description                                                       
+   &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;                                                             
+ 1 0.16    ""           "This is the last alpha version developed primarily by Ihaka and …
+ 2 0.49    "1997-04-23" "This is the oldest source release which is currently available o…
+ 3 0.60    "1997-12-05" "R becomes an official part of the GNU Project. The code is hoste…
+ 4 0.65.1  "1999-10-07" "First versions of update.packages and install.packages functions…
+ 5 1.0     "2000-02-29" "Considered by its developers stable enough for production use.[5…
+ 6 1.4     "2001-12-19" "S4 methods are introduced and the first version for Mac OS X is …
+ 7 1.8     "2003-10-08" "Introduced a flexible condition handling mechanism for signallin…
+ 8 2.0     "2004-10-04" "Introduced lazy loading, which enables fast loading of data with…
+ 9 2.1     "2005-04-18" "Support for UTF-8 encoding, and the beginnings of internationali…
+10 2.6.2   "2008-02-08" "Last version to support Windows 95, 98, Me and NT 4.0[60]"       
+# … with 12 more rows
 ```
 
 
@@ -948,12 +931,12 @@ data &lt;- jsonlite::read_json(file, ...)
 class: middle, center
 
 
-&lt;h1&gt;&lt;a href="https://ads-hs2021.netlify.app/1_Data/RDS_data.zip"&gt;Downloads&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href="https://rds-fd2022.netlify.app/1_Data/RDS_data.zip"&gt;Downloads&lt;/a&gt;&lt;/h1&gt;
 ---
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://ads-hs2021.netlify.app/index.html"&gt;Agenda&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href="https://rds-fd2022.netlify.app/index.html"&gt;Agenda&lt;/a&gt;&lt;/h1&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

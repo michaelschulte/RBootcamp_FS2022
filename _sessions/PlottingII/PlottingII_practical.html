@@ -13,13 +13,13 @@
 
 <title>Plotting II</title>
 
-<script src="PlottingII_practical_files/header-attrs-2.8/header-attrs.js"></script>
-<script src="PlottingII_practical_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="PlottingII_practical_files/header-attrs/header-attrs.js"></script>
+<script src="PlottingII_practical_files/jquery/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="PlottingII_practical_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="PlottingII_practical_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="PlottingII_practical_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="PlottingII_practical_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="PlottingII_practical_files/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="PlottingII_practical_files/bootstrap/js/bootstrap.min.js"></script>
+<script src="PlottingII_practical_files/bootstrap/shim/html5shiv.min.js"></script>
+<script src="PlottingII_practical_files/bootstrap/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -29,9 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="PlottingII_practical_files/navigation-1.1/tabsets.js"></script>
-<link href="PlottingII_practical_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="PlottingII_practical_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="PlottingII_practical_files/navigation/tabsets.js"></script>
+<link href="PlottingII_practical_files/highlightjs/default.css" rel="stylesheet" />
+<script src="PlottingII_practical_files/highlightjs/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -170,7 +170,7 @@ pre code {
 <col width='10%'>
 <tr style="border:none">
 <td style="display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none" nowrap>
-<font style='font-style:normal'>Datascience mit R lernen</font><br> <a href='https://michaelschulte.github.io/RBootcamp_FS2021/'> <i class='fas fa-home' style='font-size:.9em;'></i> </a>
+<font style='font-style:normal'>Datascience mit R lernen</font><br>
 </td>
 <td style="width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none">
 <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
@@ -386,7 +386,7 @@ pre code {
   facet_wrap(~ staat) +
   mein_theme</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li>Wenn dir <code>mein_theme</code> nicht gefällt, geh zur 1. Aufgabe und nimmm Änderungen vor. Siehe <code>?theme</code>. Probiere zum Beispiel mal die Argumente <code>axis.ticks</code> und <code>strip.placement</code> aus.</li>
+<li>Wenn dir <code>mein_theme</code> nicht gefällt, geh zur 1. Aufgabe und nimmm Änderungen vor. Siehe <code>?theme</code>. Probiere zum Beispiel mal das Argument <code>axis.ticks = element_blank()</code> um die Achsen Ticks zu entfernen.</li>
 </ol>
 </div>
 <div id="f---skalierung" class="section level3">
@@ -438,7 +438,7 @@ verbrechen_gg</code></pre>
 <ol style="list-style-type: decimal">
 <li>Es ist an der Zeit euren Plot als eine Bilddatei zu speichern. Verwende nun <code>ggsave</code> um deinen letzten <code>verbrechen_gg</code> plot als eine <code>.pdf</code>-Datei unter dem Namen <code>verbrechen.pdf</code> zu speichern. Danach solltest du deinen Plot im Ordner <code>3_Figures</code> finden. Schaue nach und öffne die Datei.</li>
 </ol>
-<pre class="r"><code>ggsave(filename = &quot;3_Figures/verbrechen.pdf&quot;, 
+<pre class="r"><code>ggsave(filename = &quot;3_Plots/verbrechen.pdf&quot;, 
        device = &quot;pdf&quot;, 
        plot = verbrechen_gg,
        width = 4, 

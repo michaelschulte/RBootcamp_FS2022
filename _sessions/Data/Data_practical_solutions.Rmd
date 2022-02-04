@@ -100,7 +100,7 @@ data <- basel[1:5, c("id", "geschlecht", "alter", "groesse", "gewicht")] %>%
   mutate(sex = case_when(geschlecht == "m" ~ 'M',
                          geschlecht == "f" ~ 'F'))
 
-data %>% mutate_all(replace_na, " ") %>% 
+data %>% 
   knitr::kable(format = "markdown", caption = "Data from 5 baselers")
 ```
 

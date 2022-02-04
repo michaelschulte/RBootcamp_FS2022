@@ -32,7 +32,7 @@ knitr::opts_chunk$set(comment=NA, fig.width=6, fig.height=6, echo = TRUE, eval =
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(knitr)
-library(baselers)
+baselers <-  read_csv('1_Data/basel.csv')
 ```
 ---
 <br><br>
@@ -327,7 +327,7 @@ Die `datatable()` Funktion aus dem `DT` Paket erstellt HTML Tabellen aus R Code.
 library(DT)
 
 datatable(baselers %>% 
-          select(id, sex, age, height, weight, income), # Only these columns
+          select(id, geschlecht, alter, groesse, gewicht, einkommen), # Only these columns
           options = list(pageLength = 4))               # 4 Rows at a time please
 ```
 

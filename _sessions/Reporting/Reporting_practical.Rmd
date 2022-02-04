@@ -26,7 +26,6 @@ knitr::opts_chunk$set(comment = NA,
 
 options(digits = 3)
 
-#library(baselers)
 library(tidyverse)
 mcdonalds <- read_csv("https://raw.githubusercontent.com/therbootcamp/BaselRBootcamp_2018July/master/_sessions/_data/complete/mcdonalds.csv")
 ```

@@ -31,12 +31,12 @@ Hier die Ergebnisse der Projekt Feedbacks (bis auf die Note Skala von 1:10). Die
 - Note = Nach dem Schulnotensystem würde ich der Gruppe die folgende Note geben.
 
 ```{r echo = FALSE, warning = FALSE}
-av_Berwertung <- 
+av_Bewertung <- 
   raw %>%
   group_by(group, Frage) %>%
   summarise(mean_Bewertung = mean(Bewertung), .groups = 'keep')
 
-av_Berwertung  %>%
+av_Bewertung  %>%
   ggplot(aes(Frage, mean_Bewertung)) +
   geom_bar(stat = 'identity') +
   facet_wrap(group ~ .) +

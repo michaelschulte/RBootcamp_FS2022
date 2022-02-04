@@ -13,13 +13,13 @@
 
 <title>Wrangling II</title>
 
-<script src="WranglingII_practical_files/header-attrs-2.11/header-attrs.js"></script>
-<script src="WranglingII_practical_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="WranglingII_practical_files/header-attrs/header-attrs.js"></script>
+<script src="WranglingII_practical_files/jquery/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="WranglingII_practical_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="WranglingII_practical_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="WranglingII_practical_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="WranglingII_practical_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="WranglingII_practical_files/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="WranglingII_practical_files/bootstrap/js/bootstrap.min.js"></script>
+<script src="WranglingII_practical_files/bootstrap/shim/html5shiv.min.js"></script>
+<script src="WranglingII_practical_files/bootstrap/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -29,9 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="WranglingII_practical_files/navigation-1.1/tabsets.js"></script>
-<link href="WranglingII_practical_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="WranglingII_practical_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="WranglingII_practical_files/navigation/tabsets.js"></script>
+<link href="WranglingII_practical_files/highlightjs/default.css" rel="stylesheet" />
+<script src="WranglingII_practical_files/highlightjs/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -223,25 +223,22 @@ library(tidyverse)     </code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>Mache dich mit dem Datensatz vertraut in dem du die ersten paar Zeilen (<code>print()</code>) und die Variablennamen (<code>names()</code>) anschaust.</li>
 </ol>
-<pre><code> [1] &quot;Stadtname&quot;          &quot;st_wbev_2011&quot;       &quot;st_wbev_2001&quot;      
- [4] &quot;proz_ver-2001–2011&quot; &quot;bevdichte&quot;          &quot;st_wbev_1930&quot;      
- [7] &quot;st_wbev_1970&quot;       &quot;st_wbev_1980&quot;       &quot;st_wbev_1990&quot;      
-[10] &quot;st_wbev_2000&quot;      </code></pre>
+<pre><code> [1] &quot;Stadtname&quot;          &quot;st_wbev_2011&quot;       &quot;st_wbev_2001&quot;       &quot;proz_ver-2001–2011&quot; &quot;bevdichte&quot;         
+ [6] &quot;st_wbev_1930&quot;       &quot;st_wbev_1970&quot;       &quot;st_wbev_1980&quot;       &quot;st_wbev_1990&quot;       &quot;st_wbev_2000&quot;      </code></pre>
 <pre><code># A tibble: 161 × 10
-   Stadtname   st_wbev_2011 st_wbev_2001 `proz_ver-2001–… bevdichte st_wbev_1930
-   &lt;chr&gt;              &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;
- 1 Basel             164516       164665             -0.1        69       148063
- 2 Bern              125681       122211              2.8        24       111783
- 3 Genève            188234       175697              7.1       119       124121
- 4 Lausanne          129383       115272             12.2        31        75915
- 5 Winterthur        103075        89484             15.2        15        53925
- 6 Zürich            376990       340197             10.8        43       290937
- 7 Biel-Bienne        51635        48142              7.3        24        37726
- 8 Lugano             55151        50877              8.4        17        17672
- 9 Luzern             78093        73233              6.6        27        47066
-10 St. Gallen         73505        69857              5.2        19        63947
-# … with 151 more rows, and 4 more variables: st_wbev_1970 &lt;dbl&gt;,
-#   st_wbev_1980 &lt;dbl&gt;, st_wbev_1990 &lt;dbl&gt;, st_wbev_2000 &lt;dbl&gt;</code></pre>
+   Stadtname   st_wbev_2011 st_wbev_2001 `proz_ver-2001–2011` bevdichte st_wbev_1930
+   &lt;chr&gt;              &lt;dbl&gt;        &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Basel             164516       164665                 -0.1        69       148063
+ 2 Bern              125681       122211                  2.8        24       111783
+ 3 Genève            188234       175697                  7.1       119       124121
+ 4 Lausanne          129383       115272                 12.2        31        75915
+ 5 Winterthur        103075        89484                 15.2        15        53925
+ 6 Zürich            376990       340197                 10.8        43       290937
+ 7 Biel-Bienne        51635        48142                  7.3        24        37726
+ 8 Lugano             55151        50877                  8.4        17        17672
+ 9 Luzern             78093        73233                  6.6        27        47066
+10 St. Gallen         73505        69857                  5.2        19        63947
+# … with 151 more rows</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Im Moment sind die Daten so angeordnet, dass jedes Jahr eine einzelne Spalte hat, also im <em>Wide</em> Format; wir brauchen sie aber im <em>Long</em> format, z.B. fürs Plotting. Verwende <code>pivot_longer()</code> um das Format zu wechseln. Verwende <code>"st_wbev_2011"</code> und <code>"st_wbev_2001"</code> für das <code>cols</code> Argument und <code>"jahr"</code> das <code>names_to</code> Argument und speichere das Resultat als neues Objekt <code>bevoelkerung_long</code> ab.</li>
 </ol>
@@ -252,10 +249,8 @@ bevoelkerung_long &lt;- bevoelkerung %&gt;%
 <li><p>Printe den neu erstellten Datensatz an. Alles wie erwartet?</p></li>
 <li><p>Nun wollen wir nicht nur die Jahre 2001 und 2011, sondern alle im Datensatz vorhandenen Jahre ins Long Format bringen. Schaue dir nochmals die Namen der Spalten an.</p></li>
 </ol>
-<pre><code> [1] &quot;Stadtname&quot;          &quot;st_wbev_2011&quot;       &quot;st_wbev_2001&quot;      
- [4] &quot;proz_ver-2001–2011&quot; &quot;bevdichte&quot;          &quot;st_wbev_1930&quot;      
- [7] &quot;st_wbev_1970&quot;       &quot;st_wbev_1980&quot;       &quot;st_wbev_1990&quot;      
-[10] &quot;st_wbev_2000&quot;      </code></pre>
+<pre><code> [1] &quot;Stadtname&quot;          &quot;st_wbev_2011&quot;       &quot;st_wbev_2001&quot;       &quot;proz_ver-2001–2011&quot; &quot;bevdichte&quot;         
+ [6] &quot;st_wbev_1930&quot;       &quot;st_wbev_1970&quot;       &quot;st_wbev_1980&quot;       &quot;st_wbev_1990&quot;       &quot;st_wbev_2000&quot;      </code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>Jede Jahr-Variable hat die gleiche Struktur, nämlich <code>st_wbev_XXX</code>. Das bedeutet, dass wir einfach <code>starts_with()</code> Funktion zur Variablenauswahl verwenden können. Benutze <code>pivot_longer()</code> und <code>starts_with()</code> um alle Jahr-Variablen zu transformieren.</li>
 </ol>
@@ -296,41 +291,33 @@ bevoelkerung_wide &lt;- bevoelkerung_long %&gt;%
 <li>Printe den Datensatz und verwende <code>summary()</code> und <code>names()</code> um einen Eindruck über dessen Struktur zu erhalten.</li>
 </ol>
 <pre><code># A tibble: 21,613 × 11
-     preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer
-     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
- 1  221900            3       1           1180        5650       1     0
- 2  538000            3       2.25        2570        7242       2     0
- 3  180000            2       1            770       10000       1     0
- 4  604000            4       3           1960        5000       1     0
- 5  510000            3       2           1680        8080       1     0
- 6 1225000            4       4.5         5420      101930       1     0
- 7  257500            3       2.25        1715        6819       2     0
- 8  291850            3       1.5         1060        9711       1     0
- 9  229500            3       1           1780        7470       1     0
-10  323000            3       2.5         1890        6560       2     0
-# … with 21,603 more rows, and 4 more variables: qf_dachstock &lt;dbl&gt;,
-#   qf_keller &lt;dbl&gt;, baujahr &lt;dbl&gt;, postleitzahl &lt;dbl&gt;</code></pre>
-<pre><code>     preis          schlafzimmer    badezimmer    qf_wohnraum   
- Min.   :  75000   Min.   : 0.0   Min.   :0.00   Min.   :  290  
- 1st Qu.: 321950   1st Qu.: 3.0   1st Qu.:1.75   1st Qu.: 1427  
- Median : 450000   Median : 3.0   Median :2.25   Median : 1910  
- Mean   : 540088   Mean   : 3.4   Mean   :2.11   Mean   : 2080  
- 3rd Qu.: 645000   3rd Qu.: 4.0   3rd Qu.:2.50   3rd Qu.: 2550  
- Max.   :7700000   Max.   :33.0   Max.   :8.00   Max.   :13540  
-  qf_parzelle         stoecke          ufer        qf_dachstock    qf_keller   
- Min.   :    520   Min.   :1.00   Min.   :0.000   Min.   : 290   Min.   :   0  
- 1st Qu.:   5040   1st Qu.:1.00   1st Qu.:0.000   1st Qu.:1190   1st Qu.:   0  
- Median :   7618   Median :1.50   Median :0.000   Median :1560   Median :   0  
- Mean   :  15107   Mean   :1.49   Mean   :0.008   Mean   :1788   Mean   : 292  
- 3rd Qu.:  10688   3rd Qu.:2.00   3rd Qu.:0.000   3rd Qu.:2210   3rd Qu.: 560  
- Max.   :1651359   Max.   :3.50   Max.   :1.000   Max.   :9410   Max.   :4820  
-    baujahr      postleitzahl  
- Min.   :1900   Min.   :98001  
- 1st Qu.:1951   1st Qu.:98033  
- Median :1975   Median :98065  
- Mean   :1971   Mean   :98078  
- 3rd Qu.:1997   3rd Qu.:98118  
- Max.   :2015   Max.   :98199  </code></pre>
+     preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer qf_dachstock
+     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;
+ 1  221900            3       1           1180        5650       1     0         1180
+ 2  538000            3       2.25        2570        7242       2     0         2170
+ 3  180000            2       1            770       10000       1     0          770
+ 4  604000            4       3           1960        5000       1     0         1050
+ 5  510000            3       2           1680        8080       1     0         1680
+ 6 1225000            4       4.5         5420      101930       1     0         3890
+ 7  257500            3       2.25        1715        6819       2     0         1715
+ 8  291850            3       1.5         1060        9711       1     0         1060
+ 9  229500            3       1           1780        7470       1     0         1050
+10  323000            3       2.5         1890        6560       2     0         1890
+# … with 21,603 more rows</code></pre>
+<pre><code>     preis          schlafzimmer    badezimmer    qf_wohnraum     qf_parzelle         stoecke    
+ Min.   :  75000   Min.   : 0.0   Min.   :0.00   Min.   :  290   Min.   :    520   Min.   :1.00  
+ 1st Qu.: 321950   1st Qu.: 3.0   1st Qu.:1.75   1st Qu.: 1427   1st Qu.:   5040   1st Qu.:1.00  
+ Median : 450000   Median : 3.0   Median :2.25   Median : 1910   Median :   7618   Median :1.50  
+ Mean   : 540088   Mean   : 3.4   Mean   :2.11   Mean   : 2080   Mean   :  15107   Mean   :1.49  
+ 3rd Qu.: 645000   3rd Qu.: 4.0   3rd Qu.:2.50   3rd Qu.: 2550   3rd Qu.:  10688   3rd Qu.:2.00  
+ Max.   :7700000   Max.   :33.0   Max.   :8.00   Max.   :13540   Max.   :1651359   Max.   :3.50  
+      ufer        qf_dachstock    qf_keller       baujahr      postleitzahl  
+ Min.   :0.000   Min.   : 290   Min.   :   0   Min.   :1900   Min.   :98001  
+ 1st Qu.:0.000   1st Qu.:1190   1st Qu.:   0   1st Qu.:1951   1st Qu.:98033  
+ Median :0.000   Median :1560   Median :   0   Median :1975   Median :98065  
+ Mean   :0.008   Mean   :1788   Mean   : 292   Mean   :1971   Mean   :98078  
+ 3rd Qu.:0.000   3rd Qu.:2210   3rd Qu.: 560   3rd Qu.:1997   3rd Qu.:98118  
+ Max.   :1.000   Max.   :9410   Max.   :4820   Max.   :2015   Max.   :98199  </code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Da es sich um einen US Datensatz handelt, sind die Flächenangaben in Quadratfuss angegeben. Wir als “rest of the world” sind natürlich es eher gewohnt in Quadratmeter zu denken. Kreiere dazu drei neue Variablen <code>qm_wohnraum</code>, <code>qm_dachstock</code> und <code>qm_keller</code>, welche die jeweilige Raumgrösse in Quadratmeter angeben. Ein Quadratfuss entspricht 0.093 Quadratmeter.</li>
 </ol>
@@ -371,21 +358,19 @@ bevoelkerung_wide &lt;- bevoelkerung_long %&gt;%
 <li>Sortiere mittels der <code>arrange()</code> und der <code>desc()</code> Funktion den Datensatz nach <code>preis</code> in absteigender Reihenfolge und printe das Resultat. Richtig sortiert?</li>
 </ol>
 <pre><code># A tibble: 21,613 × 16
-     preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer
-     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
- 1 7700000            6       8          12050       27600     2.5     0
- 2 7062500            5       4.5        10040       37325     2       1
- 3 6885000            6       7.75        9890       31374     2       0
- 4 5570000            5       5.75        9200       35069     2       0
- 5 5350000            5       5           8000       23985     2       0
- 6 5300000            6       6           7390       24829     2       1
- 7 5110800            5       5.25        8010       45517     2       1
- 8 4668000            5       6.75        9640       13068     1       1
- 9 4500000            5       5.5         6640       40014     2       1
-10 4489000            4       3           6430       27517     2       0
-# … with 21,603 more rows, and 9 more variables: qf_dachstock &lt;dbl&gt;,
-#   qf_keller &lt;dbl&gt;, baujahr &lt;dbl&gt;, postleitzahl &lt;dbl&gt;, qm_wohnraum &lt;dbl&gt;,
-#   qm_dachstock &lt;dbl&gt;, qm_keller &lt;dbl&gt;, qm_total &lt;dbl&gt;, villa &lt;chr&gt;</code></pre>
+     preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer qf_dachstock
+     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;
+ 1 7700000            6       8          12050       27600     2.5     0         8570
+ 2 7062500            5       4.5        10040       37325     2       1         7680
+ 3 6885000            6       7.75        9890       31374     2       0         8860
+ 4 5570000            5       5.75        9200       35069     2       0         6200
+ 5 5350000            5       5           8000       23985     2       0         6720
+ 6 5300000            6       6           7390       24829     2       1         5000
+ 7 5110800            5       5.25        8010       45517     2       1         5990
+ 8 4668000            5       6.75        9640       13068     1       1         4820
+ 9 4500000            5       5.5         6640       40014     2       1         6350
+10 4489000            4       3           6430       27517     2       0         6430
+# … with 21,603 more rows</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Wie gross ist der Anteil an Häuser, welche für mehr als 1 Million USD verkauft wurden?</li>
 </ol>
@@ -465,8 +450,7 @@ bevoelkerung_wide &lt;- bevoelkerung_long %&gt;%
  8         1970  2285     199.
  9         1980  2282     204.
 10         1990  2238     232.
-11         2000  3518     229.
-12         2010  1241     233.</code></pre>
+# … with 2 more rows</code></pre>
 </div>
 <div id="g---mehrere-gruppen" class="section level3">
 <h3>G - Mehrere Gruppen</h3>
@@ -504,12 +488,9 @@ bevoelkerung_wide &lt;- bevoelkerung_long %&gt;%
 <li>Welches Haus hat das schlechteste Preis-Wohnraumgrösse Verhältnis? Printe nur diese Zeile des Datensatzes.</li>
 </ol>
 <pre><code># A tibble: 1 × 17
-   preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer
-   &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
-1 874950            2          1        1080        4000       1     0
-# … with 10 more variables: qf_dachstock &lt;dbl&gt;, qf_keller &lt;dbl&gt;, baujahr &lt;dbl&gt;,
-#   postleitzahl &lt;dbl&gt;, qm_wohnraum &lt;dbl&gt;, qm_dachstock &lt;dbl&gt;, qm_keller &lt;dbl&gt;,
-#   qm_total &lt;dbl&gt;, villa &lt;chr&gt;, preis_zu_flaeche &lt;dbl&gt;</code></pre>
+   preis schlafzimmer badezimmer qf_wohnraum qf_parzelle stoecke  ufer qf_dachstock
+   &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;
+1 874950            2          1        1080        4000       1     0         1080</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Welche 10 Postleitzahlen haben im Schnitt die höchsten Hauspreise? Printe nur diese 10 Zeilen.</li>
 </ol>
@@ -607,77 +588,177 @@ bevoelkerung_wide &lt;- bevoelkerung_long %&gt;%
 </table>
 <table>
 <thead>
-<tr class="header">
-<th align="right">baujahr</th>
-<th align="right">N</th>
-<th align="right">preis_mean</th>
-<th align="right">preis_max</th>
-<th align="right">qm_wohnraum_mean</th>
+<tr>
+<th style="text-align:right;">
+baujahr
+</th>
+<th style="text-align:right;">
+N
+</th>
+<th style="text-align:right;">
+preis_mean
+</th>
+<th style="text-align:right;">
+preis_max
+</th>
+<th style="text-align:right;">
+qm_wohnraum_mean
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="right">1990</td>
-<td align="right">320</td>
-<td align="right">563966</td>
-<td align="right">3640900</td>
-<td align="right">234</td>
+<tr>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+320
+</td>
+<td style="text-align:right;">
+563966
+</td>
+<td style="text-align:right;">
+3640900
+</td>
+<td style="text-align:right;">
+234
+</td>
 </tr>
-<tr class="even">
-<td align="right">1991</td>
-<td align="right">224</td>
-<td align="right">630441</td>
-<td align="right">5300000</td>
-<td align="right">244</td>
+<tr>
+<td style="text-align:right;">
+1991
+</td>
+<td style="text-align:right;">
+224
+</td>
+<td style="text-align:right;">
+630441
+</td>
+<td style="text-align:right;">
+5300000
+</td>
+<td style="text-align:right;">
+244
+</td>
 </tr>
-<tr class="odd">
-<td align="right">1992</td>
-<td align="right">198</td>
-<td align="right">548169</td>
-<td align="right">2480000</td>
-<td align="right">223</td>
+<tr>
+<td style="text-align:right;">
+1992
+</td>
+<td style="text-align:right;">
+198
+</td>
+<td style="text-align:right;">
+548169
+</td>
+<td style="text-align:right;">
+2480000
+</td>
+<td style="text-align:right;">
+223
+</td>
 </tr>
-<tr class="even">
-<td align="right">1993</td>
-<td align="right">202</td>
-<td align="right">556612</td>
-<td align="right">3120000</td>
-<td align="right">226</td>
+<tr>
+<td style="text-align:right;">
+1993
+</td>
+<td style="text-align:right;">
+202
+</td>
+<td style="text-align:right;">
+556612
+</td>
+<td style="text-align:right;">
+3120000
+</td>
+<td style="text-align:right;">
+226
+</td>
 </tr>
-<tr class="odd">
-<td align="right">1994</td>
-<td align="right">249</td>
-<td align="right">486834</td>
-<td align="right">2880500</td>
-<td align="right">209</td>
+<tr>
+<td style="text-align:right;">
+1994
+</td>
+<td style="text-align:right;">
+249
+</td>
+<td style="text-align:right;">
+486834
+</td>
+<td style="text-align:right;">
+2880500
+</td>
+<td style="text-align:right;">
+209
+</td>
 </tr>
-<tr class="even">
-<td align="right">1995</td>
-<td align="right">169</td>
-<td align="right">577771</td>
-<td align="right">3200000</td>
-<td align="right">224</td>
+<tr>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+169
+</td>
+<td style="text-align:right;">
+577771
+</td>
+<td style="text-align:right;">
+3200000
+</td>
+<td style="text-align:right;">
+224
+</td>
 </tr>
-<tr class="odd">
-<td align="right">1996</td>
-<td align="right">195</td>
-<td align="right">639534</td>
-<td align="right">3100000</td>
-<td align="right">240</td>
+<tr>
+<td style="text-align:right;">
+1996
+</td>
+<td style="text-align:right;">
+195
+</td>
+<td style="text-align:right;">
+639534
+</td>
+<td style="text-align:right;">
+3100000
+</td>
+<td style="text-align:right;">
+240
+</td>
 </tr>
-<tr class="even">
-<td align="right">1997</td>
-<td align="right">177</td>
-<td align="right">606058</td>
-<td align="right">3800000</td>
-<td align="right">234</td>
+<tr>
+<td style="text-align:right;">
+1997
+</td>
+<td style="text-align:right;">
+177
+</td>
+<td style="text-align:right;">
+606058
+</td>
+<td style="text-align:right;">
+3800000
+</td>
+<td style="text-align:right;">
+234
+</td>
 </tr>
-<tr class="odd">
-<td align="right">1998</td>
-<td align="right">239</td>
-<td align="right">594159</td>
-<td align="right">1960000</td>
-<td align="right">241</td>
+<tr>
+<td style="text-align:right;">
+1998
+</td>
+<td style="text-align:right;">
+239
+</td>
+<td style="text-align:right;">
+594159
+</td>
+<td style="text-align:right;">
+1960000
+</td>
+<td style="text-align:right;">
+241
+</td>
 </tr>
 </tbody>
 </table>
@@ -749,13 +830,13 @@ basel %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/_sessions/WranglingII/1_Data/kc_house.csv">kc_house.csv</a></td>
+<td align="left"><a href="https://rds-fd2022.netlify.app//1_Data/kc_house.csv">kc_house.csv</a></td>
 <td align="left">21613</td>
 <td align="left">11</td>
 <td align="left">Verkaufspreise von Häusern in King County zwischen Mai 2014 und Mai 2015.</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/_sessions/WranglingII/1_Data/bevoelkerung.csv">bevoelkerung.csv</a></td>
+<td align="left"><a href="https://rds-fd2022.netlify.app/1_Data/bevoelkerung.csv">bevoelkerung.csv</a></td>
 <td align="left">161</td>
 <td align="left">10</td>
 <td align="left">Einwohnerzahlen Schweizer Städte von 1930 bis 2011.</td>
@@ -767,49 +848,109 @@ basel %&gt;%
 <p><em>Erste 5 Zeilen und 5 Spalten von kc_house.csv</em></p>
 <table>
 <thead>
-<tr class="header">
-<th align="right">preis</th>
-<th align="right">schlafzimmer</th>
-<th align="right">badezimmer</th>
-<th align="right">qf_wohnraum</th>
-<th align="right">qf_parzelle</th>
+<tr>
+<th style="text-align:right;">
+preis
+</th>
+<th style="text-align:right;">
+schlafzimmer
+</th>
+<th style="text-align:right;">
+badezimmer
+</th>
+<th style="text-align:right;">
+qf_wohnraum
+</th>
+<th style="text-align:right;">
+qf_parzelle
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="right">7700000</td>
-<td align="right">6</td>
-<td align="right">8.00</td>
-<td align="right">12050</td>
-<td align="right">27600</td>
+<tr>
+<td style="text-align:right;">
+7700000
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+12050
+</td>
+<td style="text-align:right;">
+27600
+</td>
 </tr>
-<tr class="even">
-<td align="right">7062500</td>
-<td align="right">5</td>
-<td align="right">4.50</td>
-<td align="right">10040</td>
-<td align="right">37325</td>
+<tr>
+<td style="text-align:right;">
+7062500
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+4.50
+</td>
+<td style="text-align:right;">
+10040
+</td>
+<td style="text-align:right;">
+37325
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6885000</td>
-<td align="right">6</td>
-<td align="right">7.75</td>
-<td align="right">9890</td>
-<td align="right">31374</td>
+<tr>
+<td style="text-align:right;">
+6885000
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7.75
+</td>
+<td style="text-align:right;">
+9890
+</td>
+<td style="text-align:right;">
+31374
+</td>
 </tr>
-<tr class="even">
-<td align="right">5570000</td>
-<td align="right">5</td>
-<td align="right">5.75</td>
-<td align="right">9200</td>
-<td align="right">35069</td>
+<tr>
+<td style="text-align:right;">
+5570000
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5.75
+</td>
+<td style="text-align:right;">
+9200
+</td>
+<td style="text-align:right;">
+35069
+</td>
 </tr>
-<tr class="odd">
-<td align="right">5350000</td>
-<td align="right">5</td>
-<td align="right">5.00</td>
-<td align="right">8000</td>
-<td align="right">23985</td>
+<tr>
+<td style="text-align:right;">
+5350000
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5.00
+</td>
+<td style="text-align:right;">
+8000
+</td>
+<td style="text-align:right;">
+23985
+</td>
 </tr>
 </tbody>
 </table>
@@ -873,49 +1014,109 @@ basel %&gt;%
 <p><em>Erste 5 Zeilen und 5 Spalten von bevoelkerung.csv</em></p>
 <table>
 <thead>
-<tr class="header">
-<th align="left">Stadtname</th>
-<th align="right">st_wbev_2011</th>
-<th align="right">st_wbev_2001</th>
-<th align="right">proz_ver-2001–2011</th>
-<th align="right">bevdichte</th>
+<tr>
+<th style="text-align:left;">
+Stadtname
+</th>
+<th style="text-align:right;">
+st_wbev_2011
+</th>
+<th style="text-align:right;">
+st_wbev_2001
+</th>
+<th style="text-align:right;">
+proz_ver-2001–2011
+</th>
+<th style="text-align:right;">
+bevdichte
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">Basel</td>
-<td align="right">164516</td>
-<td align="right">164665</td>
-<td align="right">-0.1</td>
-<td align="right">69</td>
+<tr>
+<td style="text-align:left;">
+Basel
+</td>
+<td style="text-align:right;">
+164516
+</td>
+<td style="text-align:right;">
+164665
+</td>
+<td style="text-align:right;">
+-0.1
+</td>
+<td style="text-align:right;">
+69
+</td>
 </tr>
-<tr class="even">
-<td align="left">Bern</td>
-<td align="right">125681</td>
-<td align="right">122211</td>
-<td align="right">2.8</td>
-<td align="right">24</td>
+<tr>
+<td style="text-align:left;">
+Bern
+</td>
+<td style="text-align:right;">
+125681
+</td>
+<td style="text-align:right;">
+122211
+</td>
+<td style="text-align:right;">
+2.8
+</td>
+<td style="text-align:right;">
+24
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Genève</td>
-<td align="right">188234</td>
-<td align="right">175697</td>
-<td align="right">7.1</td>
-<td align="right">119</td>
+<tr>
+<td style="text-align:left;">
+Genève
+</td>
+<td style="text-align:right;">
+188234
+</td>
+<td style="text-align:right;">
+175697
+</td>
+<td style="text-align:right;">
+7.1
+</td>
+<td style="text-align:right;">
+119
+</td>
 </tr>
-<tr class="even">
-<td align="left">Lausanne</td>
-<td align="right">129383</td>
-<td align="right">115272</td>
-<td align="right">12.2</td>
-<td align="right">31</td>
+<tr>
+<td style="text-align:left;">
+Lausanne
+</td>
+<td style="text-align:right;">
+129383
+</td>
+<td style="text-align:right;">
+115272
+</td>
+<td style="text-align:right;">
+12.2
+</td>
+<td style="text-align:right;">
+31
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Winterthur</td>
-<td align="right">103075</td>
-<td align="right">89484</td>
-<td align="right">15.2</td>
-<td align="right">15</td>
+<tr>
+<td style="text-align:left;">
+Winterthur
+</td>
+<td style="text-align:right;">
+103075
+</td>
+<td style="text-align:right;">
+89484
+</td>
+<td style="text-align:right;">
+15.2
+</td>
+<td style="text-align:right;">
+15
+</td>
 </tr>
 </tbody>
 </table>
