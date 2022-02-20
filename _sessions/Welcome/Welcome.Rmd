@@ -110,7 +110,7 @@ Chief Decision Scientist at Google
 
 <p align = "center">
 <img src="image/cassie.png"><br>
-<font style="font-size:10px">from <a href="https://medium.com/@kozyrkov"</a></font>
+<font style="font-size:10px">from <a href="https://medium.com/@kozyrkov">medium.com</a></font>
 </p>
 
 ]
@@ -329,8 +329,8 @@ Chief Decision Scientist at Google
 
 <ul>
   <li class="m1"><span>Random allocation</span></li>
-  <li class="m2"><span>Präferenzen für Teams?</span></li>
-  <li class="m3"><span>Gruppename finden</span></li>
+  <li class="m2"><span>Gruppename finden</span></li>
+  <li class="m3"><span>Name + Gruppename in Liste eintragen</span></li>
 </ul>
 
 
