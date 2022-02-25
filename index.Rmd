@@ -38,14 +38,14 @@ source("_sessions/baselink.R")
 
 # Downloads
 
-<h2>[Installation](installation.html)</h2>
+[Installation](installation.html)
 
-<h2>[Project + Datasets + Papers](`r noquote(baselink)`_materials/RDS_Project.zip)</h2>
+[Project + Datasets + Papers](`r noquote(baselink)`_materials/RDS_Project.zip)
 
 # Practicals
 
-Upload bitte in der Form: Gruppe_Practical#XY.zip spätestens bis Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!
+Upload bitte in der Form: Name_Practical#XY.zip spätestens bis Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!
 
-Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen!
+Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen! Am Besten das ganze Projekt Directory als .zip Datei hochladen
 
-[Practical Upload](https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb)
+<h2>[Practical Upload](https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb)</h2>
