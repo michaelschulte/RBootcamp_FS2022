@@ -377,7 +377,7 @@ patienten %>%
   rename(alter = X1, 
          bedingung = X2) %>%
   
-# Kreiere bed_label von bedingung
+# Kreiere bed_label von Bedingung
   mutate(bed_label = case_when(
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament"))
@@ -421,7 +421,7 @@ patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   inner_join(ergebnisse, by = "id")
 ```
 ]
@@ -453,7 +453,7 @@ patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   left_join(ergebnisse, by = "id")
 ```
 ]
@@ -497,7 +497,7 @@ patienten_ergebnisse = patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   left_join(ergebnisse, by = "id")
 ```
 
@@ -532,7 +532,7 @@ TIBBLE %>%
 ```{r}
 patienten_ergebnisse %>%
   
-  # Sortiere nach bedingung
+  # Sortiere nach Bedingung
   arrange(bedingung)
 ```
 
@@ -705,7 +705,7 @@ tibble %>%
 .pull-right5[
 
 ```{r}
-# Wähle id und bedingung aus
+# Wähle id und Bedingung aus
 patienten_ergebnisse %>%
   select(id, bedingung)
 ```

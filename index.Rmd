@@ -19,7 +19,7 @@ source("_sessions/baselink.R")
 |:--:|:-|:--:|:--:|
 |25.02.| Willkommen! | [slides](_sessions/Welcome/Welcome.html) | | 
 |      | Einführung R | [slides](_sessions/IntroToR/IntroToR.html), [data sets](https://michaelschulte.github.io/RDS_FS2022/1_Data/RDS_data.zip) | [source](_sessions/IntroToR/IntroToR_interactive.R) |
-|      | Data | [slides](_sessions/Data/Data.html) | [practical](_sessions/Data/Data_practical.html)<!---, [solutions](_sessions/Data/Data_practical_solutions.html)-->|
+|      | Data | [slides](_sessions/Data/Data.html) | [practical](_sessions/Data/Data_practical.html), [solutions](_sessions/Data/Data_practical_solutions.html)|
 |11.03.| Recap | | | 
 || Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical](_sessions/Wrangling/Wrangling_practical.html)<!---, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
 |      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical](_sessions/WranglingII/WranglingII_practical.html)<!---, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)-->|
@@ -34,7 +34,7 @@ source("_sessions/baselink.R")
 |27.05.| Recap | | | 
 || Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | <!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)--->| 
 
-
+<!---|| Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)|||-->
 
 # Downloads
 

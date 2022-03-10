@@ -367,7 +367,7 @@ write_csv(x = XX, file = "XX/XX.csv")
 write_csv(x = diamonds, "1_Data/diamonds_sauber.csv")
 ```
 
-12. Um sicherzustellen, dass nicht wieder die selben Probleme auftreten, lese `diamonds_clean.csv` wieder ein und schaue dir die Spaltennamen und die Spaltentypen an. Alles in Ordnung?
+12. Um sicherzustellen, dass nicht wieder die selben Probleme auftreten, lese `diamonds_sauber.csv` wieder ein und schaue dir die Spaltennamen und die Spaltentypen an. Alles in Ordnung?
 
 ```{r, eval = FALSE}
 # Lese den sauberen diamonds Datensatz ein
@@ -452,7 +452,7 @@ In diesem Unterabschnitt liest du den ebenfalls sehr bekannten `titanic` Datensa
 
 ```{r, eval = F, echo = T}
 # Lese titanic.xls
-titanic <- read_excel(path = "XX")
+titanic <- read_excel(file = "XX")
 ```
 
 ```{r}
@@ -477,7 +477,7 @@ table(titanic$XX)
 
 ```{r}
 # Wie viele haben überlebt?
-table(titanic$XX)
+table(titanic$survived)
 ```
 
 4. Verwende nochmals `table()` um auszuzählen wie viele Leute in jeder der einzlenen Passagierklassen (Spalte `pclass`) das Unglück der Titanic überlebt haben. 
@@ -497,7 +497,7 @@ table(titanic$pclass, titanic$survived)
 ```{r, eval = FALSE}
 # Schreiben Daten als .csv
 write_csv(x = titanic, 
-          path = "1_Data/titanic.csv")
+          file = "1_Data/titanic.csv")
 ```
 
 #### SPSS 
@@ -539,7 +539,7 @@ mean(x = sleep$alchohol, na.rm = TRUE)
 ```{r, eval = FALSE}
 # Schreibe Daten als .csv
 write_csv(x = sleep, 
-          path = "1_Data/sleep.csv")
+          file = "1_Data/sleep.csv")
 ```
 
 ### X - Mit `logical`s rechnen
@@ -640,7 +640,7 @@ chickens <- read_csv(file = "1_Data/chickens_na.csv",
 
 # Schreibe saubere Daten 
 write_csv(x = chickens, 
-          path = "1_Data/chickens_sauber.csv")
+          file = "1_Data/chickens_sauber.csv")
 
 # Korrogiere einzelne Werte -------------------
 
