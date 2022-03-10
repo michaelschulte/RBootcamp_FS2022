@@ -503,7 +503,7 @@ write_csv(x = titanic,
 #### SPSS 
 
 ```{r, out.width = "8%", fig.align = 'left', eval = TRUE, echo = FALSE}
-knitr::include_graphics("http://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg")
+knitr::include_graphics("https://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg")
 ```
 
 In diesem Unterabschnitt liest du den `sleep` Datensatz mit Informationen über das Schlafverhalten der Mitarbeiter der Universität Melbourne enthält aus einem SPSS format ein und speicherst die Daten als `.csv`.

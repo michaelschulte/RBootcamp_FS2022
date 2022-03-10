@@ -541,7 +541,7 @@ FALSE  TRUE
 <li>Verwende die <code>read_excel()</code> Funktion, um den Datensatz <code>titanic.xls</code> als ein neues Objekt <code>titanic</code> einzulesen.</li>
 </ol>
 <pre class="r"><code># Lese titanic.xls
-titanic &lt;- read_excel(path = &quot;XX&quot;)</code></pre>
+titanic &lt;- read_excel(file = &quot;XX&quot;)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Printe <code>titanic</code> und evaluiere die Ausmasse des Datensatzes mit <code>dim()</code>.</li>
 </ol>
@@ -585,7 +585,7 @@ table(titanic$XX, titanic$XX)</code></pre>
 </div>
 <div id="spss" class="section level4">
 <h4>SPSS</h4>
-<p><img src="http://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg" width="8%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="https://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg" width="8%" style="display: block; margin: auto auto auto 0;" /></p>
 <p>In diesem Unterabschnitt liest du den <code>sleep</code> Datensatz mit Informationen über das Schlafverhalten der Mitarbeiter der Universität Melbourne enthält aus einem SPSS format ein und speicherst die Daten als <code>.csv</code>.</p>
 <ol style="list-style-type: decimal">
 <li>Verwende die <code>read_spss()</code> Funktion, um den Datensatz <code>sleep.sav</code> als ein neues Objekt <code>sleep</code> einzulesen.</li>
@@ -723,7 +723,7 @@ chickens &lt;- read_csv(file = &quot;1_Data/chickens_na.csv&quot;,
 
 # Schreibe saubere Daten 
 write_csv(x = chickens, 
-          path = &quot;1_Data/chickens_sauber.csv&quot;)
+          file = &quot;1_Data/chickens_sauber.csv&quot;)
 
 # Korrogiere einzelne Werte -------------------
 
