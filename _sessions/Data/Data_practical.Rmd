@@ -263,24 +263,11 @@ max(basel$alter)
 min(basel$alter)
 ```
 
-
 ### D - Lesen und Schreiben von Delimiter-separierten Dateien
 
 In diesem Abschnitt wirst du den bekannten `diamonds` Datensatz einlesen und bearbeiten. 
 
-1. Finde den Filepath zum `diomands.csv` Datensatz. Setze hierzu den Cursor zwischen zwei Anführungszeichen `""` und drücke &#8677; (tab). Speichere den Filepath in einem Objekt namens `diamonds_path`. 
-
-```{r, eval = F, echo =T}
-# Setze den Cursor zwischen "" und drücke tab
-diamonds_path <- ""
-```
-
-```{r}
-# Setze den Cursor zwischen "" und drücke tab
-diamonds_path <- "1_Data/diamonds.csv"
-```
-
-2. Jetzt verwende das Objekt `diamonds_path` in der Funktion `read_csv()`, um den Datensatz einzulesen und als neues Objekt `diamonds` zu speichern. (Der Umweg über das Objekt `diamonds_path` ist natürlich nicht zwingend nötig. Man kann den Filepath auch direkt als Argument einsetzen.)
+1. Verwende die Funktion `read_csv()`, um den Datensatz `diamonds` einzulesen und als neues Objekt `diamonds` zu speichern.
 
 ```{r, eval = F, echo = T}
 # Lese den diamonds Datensatz ein
@@ -289,47 +276,47 @@ diamonds <- read_csv(file = XX)
 
 ```{r}
 # Lese den diamonds Datensatz ein
-diamonds <- read_csv(file = diamonds_path)
+diamonds <- read_csv(file = '1_Data/diamonds.csv')
 ```
 
-3. Printe den `diamonds` Datensatz. Inspiziere insbesondere die Variablennamen. Etwas stimmt nicht, oder?
+2. Printe den `diamonds` Datensatz. Inspiziere insbesondere die Variablennamen. Etwas stimmt nicht, oder?
 
 ```{r}
 # Print diamonds
 diamonds
 ```
 
-4. Du kannst das Problem lösen, indem du direkt einen `character` Vektor mit Namen dem `col_names`-Argument zuweist. Der Vektor soll folgende Namen enthalten: `karat`, `cut`, `farbe`, `klarheit`, `tiefe`, `tabelle`, `preis`.
+3. Du kannst das Problem lösen, indem du direkt einen `character` Vektor mit Namen dem `col_names`-Argument zuweist. Der Vektor soll folgende Namen enthalten: `karat`, `cut`, `farbe`, `klarheit`, `tiefe`, `tabelle`, `preis`.
 
 ```{r, eval = F, echo = T}
 # lese dimaonds nochmal ein, diesmal mit expliziten Spaltennamen
-diamonds <- read_csv(file = XX, 
+diamonds <- read_csv(file = XX/XX, 
                      col_names = c('name_1','name_2','...'))  
 ```
 
 ```{r}
-# lese dimaonds nochmal ein, diesmal mit expliziten Spaltennamen
-diamonds <- read_csv(file = diamonds_path,
+# lese diamonds nochmal ein, diesmal mit expliziten Spaltennamen
+diamonds <- read_csv(file = '1_Data/diamonds.csv',
                      col_names = c("karat", "cut", "farbe", "klarheit", "tiefe", "tabelle", "preis"))
 ```
 
-5. Re-inspeziere den Datensatz. Sind die Spaltennamen nun korrekt?
+4. Re-inspiziere den Datensatz. Sind die Spaltennamen nun korrekt?
 
 ```{r}
 # print diamonds
 diamonds
 ```
 
-6. Richte nun deine Aufmerksamkeit auf die Klassen der Variablen. Wurden die Klassen aller Variablen richtig interpretiert?
+5. Richte nun deine Aufmerksamkeit auf die Klassen der Variablen. Wurden die Klassen aller Variablen richtig interpretiert?
 
-7. Finde heraus was passiert ist. Wähle die `karat` Variable aus und schaue dir die Werte genau an. Zwischen dem 10. und 20. Eintrag solltest du eine Irregularität erkennen, die dafür verantwortlich ist, dass die Variable als `character` erkannt wurde.   
+6. Finde heraus was passiert ist. Wähle die `karat` Variable aus und schaue dir die Werte genau an. Zwischen dem 10. und 20. Eintrag solltest du eine Irregularität erkennen, die dafür verantwortlich ist, dass die Variable als `character` erkannt wurde.   
 
 ```{r}
 # Zeige die Variable Karat
 diamonds$karat
 ```
 
-8. Ersetze den falsch formatierten Wert in `karat` indem du unten im Code `XX` durch die Position (Zahl zwischen 10 und 20) des falschen Wertes ersetzt und `YY` mit dem korrekten Wert mit `.` anstatt `,`.  
+7. Ersetze den falsch formatierten Wert in `karat` indem du unten im Code `XX` durch die Position (Zahl zwischen 10 und 20) des falschen Wertes ersetzt und `YY` mit dem korrekten Wert mit `.` anstatt `,`.  
 
 ```{r, eval = F, echo = T}
 # Ersetze den falschen Wert
@@ -341,21 +328,21 @@ diamonds$karat[XX] <- YY
 diamonds$karat[17] <- 0.37
 ```
 
-9. Jetzt hast du den Wert ausgebessert, aber `karat` ist immer noch vom Typ `character`. Verwende die Funktion `type_convert()` um dies zu beheben. Siehe unten.
+8. Jetzt hast du den Wert ausgebessert, aber `karat` ist immer noch vom Typ `character`. Verwende die Funktion `type_convert()` um dies zu beheben. Siehe unten.
 
 ```{r, echo = T}
 # Re-inferiere Datentypen
 diamonds <- type_convert(diamonds)
 ```
 
-10. Printe `diamonds`, um sicher zu stellen, dass `karat` jetzt `numeric` ist, bzw. `dbl` (ein Typ von `numeric`).
+9. Printe `diamonds`, um sicher zu stellen, dass `karat` jetzt `numeric` ist, bzw. `dbl` (ein Typ von `numeric`).
 
 ```{r}
 # Zeige diamonds
 diamonds
 ```
 
-11. Nachdem du nun die Spaltennamen und die Klassen behoben hast, schreibe den Datensatz wieder auf die Festplatte unter `diamonds_sauber.csv` mit der Funktion `write_csv()`. 
+10. Nachdem du nun die Spaltennamen und die Klassen behoben hast, schreibe den Datensatz wieder auf die Festplatte unter `diamonds_sauber.csv` mit der Funktion `write_csv()`. 
 
 ```{r, eval = F, echo = T}
 # Schreibe den sauberen diamonds Datensatz 
@@ -367,14 +354,14 @@ write_csv(x = XX, file = "XX/XX.csv")
 write_csv(x = diamonds, "1_Data/diamonds_sauber.csv")
 ```
 
-12. Um sicherzustellen, dass nicht wieder die selben Probleme auftreten, lese `diamonds_sauber.csv` wieder ein und schaue dir die Spaltennamen und die Spaltentypen an. Alles in Ordnung?
+11. Um sicherzustellen, dass nicht wieder die selben Probleme auftreten, lese `diamonds_sauber.csv` wieder ein und schaue dir die Spaltennamen und die Spaltentypen an. Alles in Ordnung?
 
 ```{r, eval = FALSE}
 # Lese den sauberen diamonds Datensatz ein
 diamonds_clean <- read_csv(file = "1_Data/diamonds_sauber.csv")
 ```
 
-13. Jetzt wäre der Datensatz fertig für die Analyse. Exploriere ein wenig. Berechne deskriptive Statistiken für die verschiedenen Variablen. Du kannst mehr über die Variablen erfahren mit `?diamonds`. (Namen sind aus dem Englischen übersetzt. Verwende zum Beispiel: `mean()` und `table()`)
+12. Jetzt wäre der Datensatz fertig für die Analyse. Exploriere ein wenig. Berechne deskriptive Statistiken für die verschiedenen Variablen. Du kannst mehr über die Variablen erfahren mit `?diamonds`. (Namen sind aus dem Englischen übersetzt. Verwende zum Beispiel: `mean()` und `table()`)
 
 ```{r}
 # Deskriptive Statistiken
@@ -383,6 +370,7 @@ mean(diamonds$preis)
 table(diamonds$cut)
 table(diamonds$klarheit)
 ```
+
 
 ### E - Logische Vektoren
 

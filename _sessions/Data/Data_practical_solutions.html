@@ -425,19 +425,12 @@ min(basel$alter)</code></pre>
 <h3>D - Lesen und Schreiben von Delimiter-separierten Dateien</h3>
 <p>In diesem Abschnitt wirst du den bekannten <code>diamonds</code> Datensatz einlesen und bearbeiten.</p>
 <ol style="list-style-type: decimal">
-<li>Finde den Filepath zum <code>diomands.csv</code> Datensatz. Setze hierzu den Cursor zwischen zwei Anführungszeichen <code>""</code> und drücke ⇥ (tab). Speichere den Filepath in einem Objekt namens <code>diamonds_path</code>.</li>
-</ol>
-<pre class="r"><code># Setze den Cursor zwischen &quot;&quot; und drücke tab
-diamonds_path &lt;- &quot;XX&quot;</code></pre>
-<pre class="r"><code># Setze den Cursor zwischen &quot;&quot; und drücke tab
-diamonds_path &lt;- &quot;1_Data/diamonds.csv&quot;</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Jetzt verwende das Objekt <code>diamonds_path</code> in der Funktion <code>read_csv()</code>, um den Datensatz einzulesen und als neues Objekt <code>diamonds</code> zu speichern. (Der Umweg über das Objekt <code>diamonds_path</code> ist natürlich nicht zwingend nötig. Man kann den Filepath auch direkt als Argument einsetzen.)</li>
+<li>Verwende die Funktion <code>read_csv()</code>, um den Datensatz <code>diamonds</code> einzulesen und als neues Objekt <code>diamonds</code> zu speichern.</li>
 </ol>
 <pre class="r"><code># Lese den diamonds Datensatz ein
 diamonds &lt;- read_csv(file = XX)</code></pre>
 <pre class="r"><code># Lese den diamonds Datensatz ein
-diamonds &lt;- read_csv(file = diamonds_path)</code></pre>
+diamonds &lt;- read_csv(file = &#39;1_Data/diamonds.csv&#39;)</code></pre>
 <pre><code>Rows: 99 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
@@ -446,7 +439,7 @@ dbl (3): 62.9, 58, 4468
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<ol start="3" style="list-style-type: decimal">
+<ol start="2" style="list-style-type: decimal">
 <li>Printe den <code>diamonds</code> Datensatz. Inspiziere insbesondere die Variablennamen. Etwas stimmt nicht, oder?</li>
 </ol>
 <pre class="r"><code># Print diamonds
@@ -465,14 +458,14 @@ diamonds</code></pre>
  9 0.31  Ideal       H     VS2     62.6    57    489
 10 1.24  Very Good   F     VS1     59      60   9885
 # … with 89 more rows</code></pre>
-<ol start="4" style="list-style-type: decimal">
+<ol start="3" style="list-style-type: decimal">
 <li>Du kannst das Problem lösen, indem du direkt einen <code>character</code> Vektor mit Namen dem <code>col_names</code>-Argument zuweist. Der Vektor soll folgende Namen enthalten: <code>karat</code>, <code>cut</code>, <code>farbe</code>, <code>klarheit</code>, <code>tiefe</code>, <code>tabelle</code>, <code>preis</code>.</li>
 </ol>
 <pre class="r"><code># lese dimaonds nochmal ein, diesmal mit expliziten Spaltennamen
-diamonds &lt;- read_csv(file = XX, 
+diamonds &lt;- read_csv(file = XX/XX, 
                      col_names = c(&#39;name_1&#39;,&#39;name_2&#39;,&#39;...&#39;))  </code></pre>
-<pre class="r"><code># lese dimaonds nochmal ein, diesmal mit expliziten Spaltennamen
-diamonds &lt;- read_csv(file = diamonds_path,
+<pre class="r"><code># lese diamonds nochmal ein, diesmal mit expliziten Spaltennamen
+diamonds &lt;- read_csv(file = &#39;1_Data/diamonds.csv&#39;,
                      col_names = c(&quot;karat&quot;, &quot;cut&quot;, &quot;farbe&quot;, &quot;klarheit&quot;, &quot;tiefe&quot;, &quot;tabelle&quot;, &quot;preis&quot;))</code></pre>
 <pre><code>Rows: 100 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -482,8 +475,8 @@ dbl (3): tiefe, tabelle, preis
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li>Re-inspeziere den Datensatz. Sind die Spaltennamen nun korrekt?</li>
+<ol start="4" style="list-style-type: decimal">
+<li>Re-inspiziere den Datensatz. Sind die Spaltennamen nun korrekt?</li>
 </ol>
 <pre class="r"><code># print diamonds
 diamonds</code></pre>
@@ -501,7 +494,7 @@ diamonds</code></pre>
  9 0.58  Ideal     E     VS2       62.3      54  1809
 10 0.31  Ideal     H     VS2       62.6      57   489
 # … with 90 more rows</code></pre>
-<ol start="6" style="list-style-type: decimal">
+<ol start="5" style="list-style-type: decimal">
 <li><p>Richte nun deine Aufmerksamkeit auf die Klassen der Variablen. Wurden die Klassen aller Variablen richtig interpretiert?</p></li>
 <li><p>Finde heraus was passiert ist. Wähle die <code>karat</code> Variable aus und schaue dir die Werte genau an. Zwischen dem 10. und 20. Eintrag solltest du eine Irregularität erkennen, die dafür verantwortlich ist, dass die Variable als <code>character</code> erkannt wurde.</p></li>
 </ol>
@@ -517,14 +510,14 @@ diamonds$karat</code></pre>
  [71] &quot;0.3&quot;  &quot;0.4&quot;  &quot;0.71&quot; &quot;0.92&quot; &quot;0.7&quot;  &quot;0.55&quot; &quot;1.47&quot; &quot;0.42&quot; &quot;0.58&quot; &quot;0.44&quot;
  [81] &quot;0.31&quot; &quot;0.3&quot;  &quot;0.55&quot; &quot;0.41&quot; &quot;0.31&quot; &quot;0.33&quot; &quot;0.32&quot; &quot;2.67&quot; &quot;0.88&quot; &quot;0.57&quot;
  [91] &quot;0.36&quot; &quot;0.53&quot; &quot;0.79&quot; &quot;0.9&quot;  &quot;0.31&quot; &quot;1.03&quot; &quot;0.39&quot; &quot;0.51&quot; &quot;0.34&quot; &quot;0.25&quot;</code></pre>
-<ol start="8" style="list-style-type: decimal">
+<ol start="7" style="list-style-type: decimal">
 <li>Ersetze den falsch formatierten Wert in <code>karat</code> indem du unten im Code <code>XX</code> durch die Position (Zahl zwischen 10 und 20) des falschen Wertes ersetzt und <code>YY</code> mit dem korrekten Wert mit <code>.</code> anstatt <code>,</code>.</li>
 </ol>
 <pre class="r"><code># Ersetze den falschen Wert
 diamonds$karat[XX] &lt;- YY</code></pre>
 <pre class="r"><code># Ersetze den falschen Wert
 diamonds$karat[17] &lt;- 0.37</code></pre>
-<ol start="9" style="list-style-type: decimal">
+<ol start="8" style="list-style-type: decimal">
 <li>Jetzt hast du den Wert ausgebessert, aber <code>karat</code> ist immer noch vom Typ <code>character</code>. Verwende die Funktion <code>type_convert()</code> um dies zu beheben. Siehe unten.</li>
 </ol>
 <pre class="r"><code># Re-inferiere Datentypen
@@ -537,7 +530,7 @@ cols(
   farbe = col_character(),
   klarheit = col_character()
 )</code></pre>
-<ol start="10" style="list-style-type: decimal">
+<ol start="9" style="list-style-type: decimal">
 <li>Printe <code>diamonds</code>, um sicher zu stellen, dass <code>karat</code> jetzt <code>numeric</code> ist, bzw. <code>dbl</code> (ein Typ von <code>numeric</code>).</li>
 </ol>
 <pre class="r"><code># Zeige diamonds
@@ -556,19 +549,19 @@ diamonds</code></pre>
  9  0.58 Ideal     E     VS2       62.3      54  1809
 10  0.31 Ideal     H     VS2       62.6      57   489
 # … with 90 more rows</code></pre>
-<ol start="11" style="list-style-type: decimal">
+<ol start="10" style="list-style-type: decimal">
 <li>Nachdem du nun die Spaltennamen und die Klassen behoben hast, schreibe den Datensatz wieder auf die Festplatte unter <code>diamonds_sauber.csv</code> mit der Funktion <code>write_csv()</code>.</li>
 </ol>
 <pre class="r"><code># Schreibe den sauberen diamonds Datensatz 
 write_csv(x = XX, file = &quot;XX/XX.csv&quot;)</code></pre>
 <pre class="r"><code># Schreibe den sauberen diamonds Datensatz 
 write_csv(x = diamonds, &quot;1_Data/diamonds_sauber.csv&quot;)</code></pre>
-<ol start="12" style="list-style-type: decimal">
+<ol start="11" style="list-style-type: decimal">
 <li>Um sicherzustellen, dass nicht wieder die selben Probleme auftreten, lese <code>diamonds_sauber.csv</code> wieder ein und schaue dir die Spaltennamen und die Spaltentypen an. Alles in Ordnung?</li>
 </ol>
 <pre class="r"><code># Lese den sauberen diamonds Datensatz ein
 diamonds_clean &lt;- read_csv(file = &quot;1_Data/diamonds_sauber.csv&quot;)</code></pre>
-<ol start="13" style="list-style-type: decimal">
+<ol start="12" style="list-style-type: decimal">
 <li>Jetzt wäre der Datensatz fertig für die Analyse. Exploriere ein wenig. Berechne deskriptive Statistiken für die verschiedenen Variablen. Du kannst mehr über die Variablen erfahren mit <code>?diamonds</code>. (Namen sind aus dem Englischen übersetzt. Verwende zum Beispiel: <code>mean()</code> und <code>table()</code>)</li>
 </ol>
 <pre class="r"><code># Deskriptive Statistiken
@@ -643,12 +636,12 @@ mean(diamonds$karat &gt; 1)</code></pre>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019–present%29.svg" width="8%" style="display: block; margin: auto auto auto 0;" /></p>
 <p>In diesem Unterabschnitt liest du den ebenfalls sehr bekannten <code>titanic</code> Datensatz aus einem Excel Format und speicherst die Daten als <code>.csv</code>.</p>
 <ol style="list-style-type: decimal">
-<li>Verwende die <code>read_excel()</code> Funktion, um den Datensatz <code>titanic.xls</code> als ein neues Objekt <code>titanic</code> einzulesen.</li>
+<li>Verwende die <code>read_excel()</code> Funktion, um den Datensatz <code>titanic.xls</code> als ein neues Objekt <code>titanic</code> einzulesen. !Achtung! erstes Argument heisst hier <code>path</code>, nicht <code>file</code>!</li>
 </ol>
 <pre class="r"><code># Lese titanic.xls
 titanic &lt;- read_excel(path = &quot;XX&quot;)</code></pre>
 <pre class="r"><code># Lese titanic.xls
-titanic &lt;- read_excel(&quot;1_Data/titanic.xls&quot;)</code></pre>
+titanic &lt;- read_excel(path = &quot;1_Data/titanic.xls&quot;)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Printe <code>titanic</code> und evaluiere die Ausmasse des Datensatzes mit <code>dim()</code>.</li>
 </ol>
@@ -698,11 +691,11 @@ table(titanic$pclass, titanic$survived)</code></pre>
 </ol>
 <pre class="r"><code># Schreiben Daten als .csv
 write_csv(x = titanic, 
-          path = &quot;1_Data/titanic.csv&quot;)</code></pre>
+          file = &quot;1_Data/titanic.csv&quot;)</code></pre>
 </div>
 <div id="spss" class="section level4">
 <h4>SPSS</h4>
-<p><img src="http://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg" width="8%" style="display: block; margin: auto auto auto 0;" /></p>
+<p><img src="https://www.sqlearn.gr/wp-content/uploads/2010/12/2000px-SPSS_logo.jpg" width="8%" style="display: block; margin: auto auto auto 0;" /></p>
 <p>In diesem Unterabschnitt liest du den <code>sleep</code> Datensatz mit Informationen über das Schlafverhalten der Mitarbeiter der Universität Melbourne enthält aus einem SPSS format ein und speicherst die Daten als <code>.csv</code>.</p>
 <ol style="list-style-type: decimal">
 <li>Verwende die <code>read_spss()</code> Funktion, um den Datensatz <code>sleep.sav</code> als ein neues Objekt <code>sleep</code> einzulesen.</li>
@@ -748,7 +741,7 @@ mean(x = sleep$alchohol, na.rm = TRUE)</code></pre>
 </ol>
 <pre class="r"><code># Schreibe Daten als .csv
 write_csv(x = sleep, 
-          path = &quot;1_Data/sleep.csv&quot;)</code></pre>
+          file = &quot;1_Data/sleep.csv&quot;)</code></pre>
 </div>
 </div>
 <div id="x---mit-logicals-rechnen" class="section level3">
@@ -859,7 +852,7 @@ chickens &lt;- read_csv(file = &quot;1_Data/chickens_na.csv&quot;,
 
 # Schreibe saubere Daten 
 write_csv(x = chickens, 
-          path = &quot;1_Data/chickens_sauber.csv&quot;)
+          file = &quot;1_Data/chickens_sauber.csv&quot;)
 
 # Korrogiere einzelne Werte -------------------
 
