@@ -223,7 +223,7 @@ patienten_ergebnisse %&gt;%
 
 ---
 
-# `replace_na()`
+# `drop_na()`
 
 .pull-left4[
 
@@ -612,7 +612,7 @@ patienten_ergebnisse_lang %&gt;%
     &lt;li&gt;&lt;span&gt;&lt;mono&gt;summarise()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
     &lt;li&gt;&lt;span&gt;&lt;mono&gt;summarise_if()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
     &lt;li&gt;&lt;span&gt;&lt;mono&gt;group_by()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;&lt;mono&gt;n(), first(), last(), nth()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;mono&gt;n()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
     &lt;li&gt;&lt;span&gt;&lt;mono&gt;pull()&lt;/mono&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;/span&gt;&lt;/li&gt;
@@ -851,25 +851,29 @@ DATEN %&gt;%
 .pull-right5[
 
 
+
+
 ```r
-basel %&gt;%
+med_trial %&gt;%
   
   # Gruppiere nach Geschlecht
-  group_by(geschlecht) %&gt;%
+  group_by(cond) %&gt;%
   
   # Berechne Statistiken
   summarise(
     alter_mean = mean(alter),
-    groesse_median = median(groesse)
+    start_mean = mean(start),
+    end_mean = mean(end)
   )
 ```
 
 ```
-## # A tibble: 2 × 3
-##   geschlecht alter_mean groesse_median
-##   &lt;chr&gt;           &lt;dbl&gt;          &lt;dbl&gt;
-## 1 f                49.8           164 
-## 2 m                49.1           178.
+## # A tibble: 3 × 4
+##   cond    alter_mean start_mean end_mean
+##   &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 med_X         49        0.705    0.55 
+## 2 med_Y         44        0.395    0.56 
+## 3 plazebo       43.7      0.723    0.597
 ```
 
 ]
@@ -885,7 +889,7 @@ basel %&gt;%
 DATEN %&gt;%
   group_by(GRUPPEN_VAR) %&gt;%
   summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
+    NAME1 = n(VAR1),
     NAME2 = SUMMARY_FUN(VAR2)
   )
 ```
@@ -900,161 +904,27 @@ DATEN %&gt;%
 
 
 ```r
-basel %&gt;%
+med_trial %&gt;%
   
   # Gruppiere nach Geschlecht
-  group_by(geschlecht) %&gt;%
+  group_by(cond) %&gt;%
   
   # Berechne Statistiken
   summarise(
-    N = n()
+    N = n(), 
+    alter_mean = mean(alter),
+    start_mean = mean(start),
+    end_mean = mean(end)
   )
 ```
 
 ```
-## # A tibble: 2 × 2
-##   geschlecht     N
-##   &lt;chr&gt;      &lt;int&gt;
-## 1 f           5000
-## 2 m           5000
-```
-
-]
-
----
-
-# `first()`
-
-.pull-left4[
-
-
-```r
-DATEN %&gt;%
-  group_by(GRUPPEN_VAR) %&gt;%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-
-```r
-basel %&gt;%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %&gt;%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung)
-  )
-```
-
-```
-## # A tibble: 2 × 3
-##   geschlecht     N bild_1       
-##   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;        
-## 1 f           5000 obligatorisch
-## 2 m           5000 sek III
-```
-
-]
-
----
-
-# `last()`
-
-.pull-left4[
-
-
-```r
-DATEN %&gt;%
-  group_by(GRUPPEN_VAR) %&gt;%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-
-```r
-basel %&gt;%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %&gt;%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung),
-    bild_N = last(bildung)
-  )
-```
-
-```
-## # A tibble: 2 × 4
-##   geschlecht     N bild_1        bild_N
-##   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;         &lt;chr&gt; 
-## 1 f           5000 obligatorisch lehre 
-## 2 m           5000 sek III       lehre
-```
-
-]
-
----
-
-# `nth()`
-
-.pull-left4[
-
-
-```r
-DATEN %&gt;%
-  group_by(GRUPPEN_VAR) %&gt;%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-
-```r
-basel %&gt;%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %&gt;%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung),
-    bild_N = last(bildung),
-    bild_150 = nth(bildung, 150)
-  )
-```
-
-```
-## # A tibble: 2 × 5
-##   geschlecht     N bild_1        bild_N bild_150  
-##   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;     
-## 1 f           5000 obligatorisch lehre  obligator…
-## 2 m           5000 sek III       lehre  lehre
+## # A tibble: 3 × 5
+##   cond        N alter_mean start_mean end_mean
+##   &lt;chr&gt;   &lt;int&gt;      &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 med_X       2       49        0.705    0.55 
+## 2 med_Y       2       44        0.395    0.56 
+## 3 plazebo     3       43.7      0.723    0.597
 ```
 
 ]

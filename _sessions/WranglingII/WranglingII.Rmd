@@ -191,7 +191,7 @@ patienten_ergebnisse %>%
 
 ---
 
-# `replace_na()`
+# `drop_na()`
 
 .pull-left4[
 
@@ -504,7 +504,7 @@ patienten_ergebnisse_lang %>%
     <li><span><mono>summarise()</mono></span></li>
     <li><span><mono>summarise_if()</mono></span></li>
     <li><span><mono>group_by()</mono></span></li>
-    <li><span><mono>n(), first(), last(), nth()</mono></span></li>
+    <li><span><mono>n()</mono></span></li>
     <li><span><mono>pull()</mono></span></li>
   </ul>
   </span></li>
@@ -683,16 +683,28 @@ DATEN %>%
 
 .pull-right5[
 
+```{r, echo = F }
+med_trial <- tibble(id = seq(1,7),
+                    cond = c(rep('plazebo', 3),
+                             rep('med_X', 2),
+                             rep('med_Y', 2)),
+                    alter = c(34, 54, 43, 45, 53, 22, 66),
+                    start = c(0.76, 0.54, 0.87, 0.76, 0.65, 0.34, 0.45),
+                    end = c(0.87, 0.58, 0.34, 0.65, 0.45, 0.36, 0.76))
+```
+
 ```{r}
-basel %>%
+
+med_trial %>%
   
   # Gruppiere nach Geschlecht
-  group_by(geschlecht) %>%
+  group_by(cond) %>%
   
   # Berechne Statistiken
   summarise(
     alter_mean = mean(alter),
-    groesse_median = median(groesse)
+    start_mean = mean(start),
+    end_mean = mean(end)
   )
 ```
 
@@ -708,7 +720,7 @@ basel %>%
 DATEN %>%
   group_by(GRUPPEN_VAR) %>%
   summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
+    NAME1 = n(VAR1),
     NAME2 = SUMMARY_FUN(VAR2)
   )
 ```
@@ -724,122 +736,17 @@ options(tibble.width=50, tibble.print_max=5, tibble.print_min=5, tibble.max_extr
 
 
 ```{r}
-basel %>%
+med_trial %>%
   
   # Gruppiere nach Geschlecht
-  group_by(geschlecht) %>%
+  group_by(cond) %>%
   
   # Berechne Statistiken
   summarise(
-    N = n()
-  )
-```
-
-]
-
----
-
-# `first()`
-
-.pull-left4[
-
-```{r, eval = F}
-DATEN %>%
-  group_by(GRUPPEN_VAR) %>%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-```{r}
-basel %>%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %>%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung)
-  )
-```
-
-]
-
----
-
-# `last()`
-
-.pull-left4[
-
-```{r, eval = F}
-DATEN %>%
-  group_by(GRUPPEN_VAR) %>%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-```{r}
-basel %>%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %>%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung),
-    bild_N = last(bildung)
-  )
-```
-
-]
-
----
-
-# `nth()`
-
-.pull-left4[
-
-```{r, eval = F}
-DATEN %>%
-  group_by(GRUPPEN_VAR) %>%
-  summarise(
-    NAME1 = SUMMARY_FUN(VAR1),
-    NAME2 = SUMMARY_FUN(VAR2)
-  )
-```
-
-
-]
-
-.pull-right5[
-
-```{r}
-basel %>%
-  
-  # Gruppiere nach Geschlecht
-  group_by(geschlecht) %>%
-  
-  # Berechne Statistiken
-  summarise(
-    N = n(),
-    bild_1 = first(bildung),
-    bild_N = last(bildung),
-    bild_150 = nth(bildung, 150)
+    N = n(), 
+    alter_mean = mean(alter),
+    start_mean = mean(start),
+    end_mean = mean(end)
   )
 ```
 

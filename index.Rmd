@@ -21,8 +21,8 @@ source("_sessions/baselink.R")
 |      | Einführung R | [slides](_sessions/IntroToR/IntroToR.html), [data sets](https://michaelschulte.github.io/RDS_FS2022/1_Data/RDS_data.zip) | [source](_sessions/IntroToR/IntroToR_interactive.R) |
 |      | Data | [slides](_sessions/Data/Data.html) | [practical](_sessions/Data/Data_practical.html), [solutions](_sessions/Data/Data_practical_solutions.html)|
 |11.03.| Recap | | | 
-|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical](_sessions/Wrangling/Wrangling_practical.html)<!---, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
-|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical](_sessions/WranglingII/WranglingII_practical.html)<!---, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)-->|
+|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical](_sessions/Wrangling/Wrangling_practical.html), [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)|  
+|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical](_sessions/WranglingII/WranglingII_practical.html), [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)|
 |25.03.| Recap | | | 
 || Plotting I | [slides](_sessions/PlottingI/PlottingI.html) | [practical](_sessions/PlottingI/PlottingI_practicaI.html)<!---, [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)-->| 
 || Plotting II | [slides](_sessions/PlottingII/PlottingII.html) | [practical](_sessions/PlottingII/PlottingII_practical.html)<!---, [solutions](_sessions/PlottingII/PlottingII_practical_solutions.html)-->|
@@ -31,10 +31,9 @@ source("_sessions/baselink.R")
 ||Intro Finales Projekt||[Avocado](_sessions/Project/Final.html)||
 |29.04.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical](_sessions/LinearModelsI/LinearModelsI_practical.html)<!---, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
 || Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical](_sessions/Reporting/Reporting_practical.html)<!---, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
+|| Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)|||
 |27.05.| Recap | | | 
 || Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | <!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)--->| 
-
-<!---|| Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)|||-->
 
 # Downloads
 
