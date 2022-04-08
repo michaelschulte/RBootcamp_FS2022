@@ -234,14 +234,14 @@ ggplot(data = mcdonalds, aes(x = Category, y = Calories, fill = Category)) +
        subtitle = "Kalorienverteilung pro Menü Kategorie")
 ```
 
-3. Ergänze `guides(fill = FALSE)`, so dass keine Legende gezeigt wird. 
+3. Ergänze `theme(legend.position = "none") `, so dass keine Legende gezeigt wird. 
 
 ```{r, fig.width = 8, fig.height = 3}
 ggplot(data = mcdonalds, aes(x = Category, y = Calories, fill = Category)) +
   geom_violin() +
   labs(title = "McDonalds",
        subtitle = "Kalorienverteilung pro Menü Kategorie") +
-  guides(fill = FALSE)
+  theme(legend.position = "none") 
 ```
 
 4. Verwende `geom_jitter()` um Punkte über die Violinen zu plotten. Setze in der Funktion `width = .1` und `alpha = .5`.
@@ -252,7 +252,7 @@ ggplot(data = mcdonalds,
   geom_violin() +
   labs(title = "McDonalds",
        subtitle = "Kalorienverteilung pro Menü Kategorie") +
-  guides(fill = FALSE) +
+  theme(legend.position = "none")  +
   geom_jitter(width = .1, alpha = .5)
 ```
 

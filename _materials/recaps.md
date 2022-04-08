@@ -43,7 +43,23 @@ co2 = 2.3 2.8 3 4.5 g/liter
 - median verbrauch pro manufacturer
 - pull()
 
+# Session 3 Plotting
+
+data()
+simple geom_bar() with 
+
+star %>% ggplot(aes(x = species)) + 
+geom_bar() +
+
+  theme(axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=1))
 
 
+geom_point(mass / height)
+geom_smooth(method = 'lm')
+which.max()
 
+library(ggthemes)
+ theme_fivethirtyeight()
 
+facet_grid(gender ~ .)
+patchwork
