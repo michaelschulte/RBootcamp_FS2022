@@ -14,7 +14,7 @@
 
 <title>Datascience mit R lernen</title>
 
-<script src="index_files/header-attrs-2.11/header-attrs.js"></script>
+<script src="index_files/header-attrs-2.14/header-attrs.js"></script>
 <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="index_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -58,6 +58,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="index.css" type="text/css" />
 
 
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -166,8 +170,10 @@ pre code {
 
 
 <h1 class="title toc-ignore">Datascience mit R lernen</h1>
-<h3 class="subtitle"><font style='font-color = white'>420257, Stand: 2022-02-18</font></h3>
-<h4 class="author"><font style='font-style:normal;font-size:20px;padding-left:9.3px'>FS 2022</font></h4>
+<h3 class="subtitle"><font style='font-color = white'>420257, Stand:
+2022-04-29</font></h3>
+<h4 class="author"><font style='font-style:normal;font-size:20px;padding-left:9.3px'>FS
+2022</font></h4>
 <h4 class="date"><img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style= 'height:14.7px;vertical-align:baseline'/></h4>
 
 </div>
@@ -175,7 +181,13 @@ pre code {
 
 <div id="der-plan" class="section level1">
 <h1>Der Plan</h1>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="28%" />
+<col width="14%" />
+<col width="28%" />
+<col width="28%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Datum</th>
@@ -188,20 +200,27 @@ pre code {
 <tr class="odd">
 <td align="center">25.02.</td>
 <td align="left">Willkommen!</td>
-<td align="center"><a href="_sessions/Welcome/Welcome.html">slides</a></td>
+<td align="center"><a
+href="_sessions/Welcome/Welcome.html">slides</a></td>
 <td align="center"></td>
 </tr>
 <tr class="even">
 <td align="center"></td>
 <td align="left">Einführung R</td>
-<td align="center"><a href="_sessions/IntroToR/IntroToR.html">slides</a>, <a href="https://michaelschulte.github.io/RDS_FS2022/1_Data/RDS_data.zip">data sets</a></td>
-<td align="center"><a href="_sessions/IntroToR/IntroToR_interactive.R">source</a></td>
+<td align="center"><a
+href="_sessions/IntroToR/IntroToR.html">slides</a>, <a
+href="https://michaelschulte.github.io/RDS_FS2022/1_Data/RDS_data.zip">data
+sets</a></td>
+<td align="center"><a
+href="_sessions/IntroToR/IntroToR_interactive.R">source</a></td>
 </tr>
 <tr class="odd">
 <td align="center"></td>
 <td align="left">Data</td>
 <td align="center"><a href="_sessions/Data/Data.html">slides</a></td>
-<td align="center"><a href="_sessions/Data/Data_practical.html">practical</a><!---, [solutions](_sessions/Data/Data_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/Data/Data_practical.html">practical</a>, <a
+href="_sessions/Data/Data_practical_solutions.html">solutions</a></td>
 </tr>
 <tr class="even">
 <td align="center">11.03.</td>
@@ -212,14 +231,21 @@ pre code {
 <tr class="odd">
 <td align="center"></td>
 <td align="left">Wrangling I</td>
-<td align="center"><a href="_sessions/Wrangling/Wrangling.html">slides</a></td>
-<td align="center"><a href="_sessions/Wrangling/Wrangling_practical.html">practical</a><!---, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/Wrangling/Wrangling.html">slides</a></td>
+<td align="center"><a
+href="_sessions/Wrangling/Wrangling_practical.html">practical</a>, <a
+href="_sessions/Wrangling/Wrangling_practical_solutions.html">solutions</a></td>
 </tr>
 <tr class="even">
 <td align="center"></td>
 <td align="left">Wrangling II</td>
-<td align="center"><a href="_sessions/WranglingII/WranglingII.html">slides</a></td>
-<td align="center"><a href="_sessions/WranglingII/WranglingII_practical.html">practical</a><!---, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/WranglingII/WranglingII.html">slides</a></td>
+<td align="center"><a
+href="_sessions/WranglingII/WranglingII_practical.html">practical</a>,
+<a
+href="_sessions/WranglingII/WranglingII_practical_solutions.html">solutions</a></td>
 </tr>
 <tr class="odd">
 <td align="center">25.03.</td>
@@ -230,14 +256,20 @@ pre code {
 <tr class="even">
 <td align="center"></td>
 <td align="left">Plotting I</td>
-<td align="center"><a href="_sessions/PlottingI/PlottingI.html">slides</a></td>
-<td align="center"><a href="_sessions/PlottingI/PlottingI_practicaI.html">practical</a><!---, [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/PlottingI/PlottingI.html">slides</a></td>
+<td align="center"><a
+href="_sessions/PlottingI/PlottingI_practicaI.html">practical</a>, <a
+href="_sessions/PlottingI/PlottingI_practicaI_solutions.html">solutions</a></td>
 </tr>
 <tr class="odd">
 <td align="center"></td>
 <td align="left">Plotting II</td>
-<td align="center"><a href="_sessions/PlottingII/PlottingII.html">slides</a></td>
-<td align="center"><a href="_sessions/PlottingII/PlottingII_practical.html">practical</a><!---, [solutions](_sessions/PlottingII/PlottingII_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/PlottingII/PlottingII.html">slides</a></td>
+<td align="center"><a
+href="_sessions/PlottingII/PlottingII_practical.html">practical</a>, <a
+href="_sessions/PlottingII/PlottingII_practical_solutions.html">solutions</a></td>
 </tr>
 <tr class="even">
 <td align="center">08.04.</td>
@@ -248,56 +280,76 @@ pre code {
 <tr class="odd">
 <td align="center"></td>
 <td align="left">Plotting III + Competition</td>
-<td align="center"><a href="_sessions/PlottingIII/PlottingIII.html">slides</a></td>
-<td align="center"><!---[Competition](_sessions/PlottingIII/Competition.html)--></td>
+<td align="center"><a
+href="_sessions/PlottingIII/PlottingIII.html">slides</a></td>
+<td align="center"><a
+href="_sessions/PlottingIII/Competition.html">Competition</a></td>
 </tr>
 <tr class="even">
 <td align="center"></td>
 <td align="left">Intro Finales Projekt</td>
 <td align="center"></td>
-<td align="center"><a href="_sessions/Project/Final.html">Avocado</a></td>
+<td align="center"><a
+href="_sessions/Project/Final.html">Avocado</a></td>
 </tr>
 <tr class="odd">
 <td align="center">29.04.</td>
 <td align="left">Lineare Modelle</td>
-<td align="center"><a href="_sessions/LinearModelsI/LinearModelsI.html">slides</a></td>
-<td align="center"><a href="_sessions/LinearModelsI/LinearModelsI_practical.html">practical</a><!---, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/LinearModelsI/LinearModelsI.html">slides</a></td>
+<td align="center"><a
+href="_sessions/LinearModelsI/LinearModelsI_practical.html">practical</a><!---, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)--></td>
 </tr>
 <tr class="even">
 <td align="center"></td>
 <td align="left">Reporting</td>
-<td align="center"><a href="_sessions/Reporting/Reporting.html">slides</a></td>
-<td align="center"><a href="_sessions/Reporting/Reporting_practical.html">practical</a><!---, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)--></td>
+<td align="center"><a
+href="_sessions/Reporting/Reporting.html">slides</a></td>
+<td align="center"><a
+href="_sessions/Reporting/Reporting_practical.html">practical</a><!---, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)--></td>
 </tr>
 <tr class="odd">
+<td align="center"></td>
+<td align="left">Evaluation</td>
+<td align="center"><a
+href="https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR">Eval-Fragebogen</a></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
 <td align="center">27.05.</td>
 <td align="left">Recap</td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center"></td>
 <td align="left">Projektpräsentationen</td>
-<td align="center"><a href="_sessions/NextSteps/NextSteps.html">Next steps</a></td>
-<td align="center"><!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)---></td>
+<td align="center"><a href="_sessions/NextSteps/NextSteps.html">Next
+steps</a></td>
+<td
+align="center"><!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)---></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="downloads" class="section level1">
 <h1>Downloads</h1>
-<h2>
-<a href="installation.html">Installation</a>
-</h2>
-<h2>
-<a href="https://rds-fs2022.netlify.app/_materials/RDS_Project.zip">Project + Datasets + Papers</a>
-</h2>
+<p><a href="installation.html">Installation</a></p>
+<p><a
+href="https://rds-fs2022.netlify.app/_materials/RDS_Project.zip">Project
++ Datasets + Papers</a></p>
 </div>
 <div id="practicals" class="section level1">
 <h1>Practicals</h1>
-<p>Upload bitte in der Form: Gruppe_Practical#XY.zip spätestens bis Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!</p>
-<p>Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen!</p>
-<p><a href="https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb">Practical Upload</a></p>
+<p>Upload bitte in der Form: Name_Practical#XY.zip spätestens bis
+Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!</p>
+<p>Practicals sollen immer alle nötigen Daten, .RProject File und Code
+beinhalten und problemlos laufen! Am Besten das ganze Projekt Directory
+als .zip Datei hochladen</p>
+<h2>
+<a href="https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb">Practical
+Upload</a>
+</h2>
 </div>
 
 

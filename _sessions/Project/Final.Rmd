@@ -62,7 +62,7 @@ Du wirst:
 2. **Fragestellung erarbeiten**
 
 - Überleg dir eine Frage, die du mit den Daten beantworten kannst. Wie ist der Zusammenhang zwischen X und Y? Was treibt die Variable X? Gibt es eine bevorzugte Art Avocados? Verändert sich eine Variable im Beobachtungszeitraum?
-- Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**29.04.22**, 12.00 Uhr (high noon))
+- Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.04.22**, 12.00 Uhr (high noon))
 
 3. **Fragestellung beantworten**
 
@@ -127,7 +127,7 @@ sales <- read_csv('1_Data/sales.csv')
 
 2. Fragestellung kommt auf den Slide Nummer 3.
 
-3. Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**27.05.21**, 12.00 Uhr (high noon))
+3. Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (**28.04.22**, 12.00 Uhr (high noon))
 
 ### E - Fragestellung beantworten
 

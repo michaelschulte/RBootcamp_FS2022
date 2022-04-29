@@ -730,7 +730,7 @@ Der `verbrechen` Datensatz ist ein Ausschnitt aus dem "Communities and Crime Unn
 
 <p align="center" width="100%">
 <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">
-  <img src="http://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png" style="width:70%"></a>
+  <img src="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png" style="width:70%"></a>
   <br>
   <font style="font-size:10px">from <a href="https://www.rstudio.com/resources/cheatsheets/">R Studio</a></font>
 </p>

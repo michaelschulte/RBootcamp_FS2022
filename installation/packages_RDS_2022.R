@@ -20,7 +20,6 @@ Bootcamp_package_installation <- function() {
     "xml2",
     "kableExtra",
     "lubridate",
-    "sjPlot",
     "readxl"
     
   )
@@ -34,7 +33,8 @@ Bootcamp_package_installation <- function() {
     "plotly",
     "viridis",
     "ggthemes",
-    "gridExtra"
+    "gridExtra",
+    "sjPlot"
   )
   
   message("Welcome to RDS!")

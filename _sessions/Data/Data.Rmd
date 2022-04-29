@@ -754,7 +754,7 @@ read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
 
 ---
 
-# Other data <font style="font-size: 16px">siehe <a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html">rio</a></font>
+# Andere Datentypen <font style="font-size: 16px">siehe <a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html">rio</a></font>
 
 .pull-left45[
 ### `readr` <img src="image/readr.png" width="50", align="right"> 
@@ -799,12 +799,6 @@ data <- jsonlite::read_json(file, ...)
 ```
 ]
 
----
-
-class: middle, center
-
-
-<h1><a href="`r noquote(baselink)`1_Data/RDS_data.zip">Downloads</a></h1>
 ---
 
 class: middle, center

@@ -351,6 +351,35 @@ patienten %>%
 
 ---
 
+# Logik Operatoren
+
+.pull-left45[
+
+<ul>
+  <li class="m1"><span><high>=</high> Zuweisung (siehe Assignmen Operator!)</span></li>
+  <li class="m2"><span><high>==</high> 'ist gleich' logischer Test -> TRUE, FALSE  </span></li>
+  <li class="m3"><span><high>``<, <=``</high> kleiner, kleiner gleich -> TRUE, FALSE</span></li></span></li>
+  <li class="m5"><span><high>``>, >=``</high> grösser, grösser gleich -> eTRUE, FALSE</span></li>
+  <li class="m6"><span><high>&</high> Logisches UND</span></li>
+  <li class="m7"><span><high>|</high> Logisches ODER<span></li>
+</ul>
+
+
+
+]
+
+.pull-right45[
+
+```{r}
+
+```
+
+]
+
+
+---
+
+
 # `case_when()`
 
 .pull-left45[
@@ -377,7 +406,7 @@ patienten %>%
   rename(alter = X1, 
          bedingung = X2) %>%
   
-# Kreiere bed_label von bedingung
+# Kreiere bed_label von Bedingung
   mutate(bed_label = case_when(
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament"))
@@ -421,7 +450,7 @@ patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   inner_join(ergebnisse, by = "id")
 ```
 ]
@@ -453,7 +482,7 @@ patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   left_join(ergebnisse, by = "id")
 ```
 ]
@@ -497,7 +526,7 @@ patienten_ergebnisse = patienten %>%
     bedingung == 1 ~ "placebo",
     bedingung == 2 ~ "medikament")) %>%
   
-  # Verbinde mit ergebnisse
+  # Verbinde mit Ergebnisse
   left_join(ergebnisse, by = "id")
 ```
 
@@ -532,7 +561,7 @@ TIBBLE %>%
 ```{r}
 patienten_ergebnisse %>%
   
-  # Sortiere nach bedingung
+  # Sortiere nach Bedingung
   arrange(bedingung)
 ```
 
@@ -705,7 +734,7 @@ tibble %>%
 .pull-right5[
 
 ```{r}
-# Wähle id und bedingung aus
+# Wähle id und Bedingung aus
 patienten_ergebnisse %>%
   select(id, bedingung)
 ```

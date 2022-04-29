@@ -19,33 +19,32 @@ source("_sessions/baselink.R")
 |:--:|:-|:--:|:--:|
 |25.02.| Willkommen! | [slides](_sessions/Welcome/Welcome.html) | | 
 |      | Einführung R | [slides](_sessions/IntroToR/IntroToR.html), [data sets](https://michaelschulte.github.io/RDS_FS2022/1_Data/RDS_data.zip) | [source](_sessions/IntroToR/IntroToR_interactive.R) |
-|      | Data | [slides](_sessions/Data/Data.html) | [practical](_sessions/Data/Data_practical.html)<!---, [solutions](_sessions/Data/Data_practical_solutions.html)-->|
+|      | Data | [slides](_sessions/Data/Data.html) | [practical](_sessions/Data/Data_practical.html), [solutions](_sessions/Data/Data_practical_solutions.html)|
 |11.03.| Recap | | | 
-|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical](_sessions/Wrangling/Wrangling_practical.html)<!---, [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)-->|  
-|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical](_sessions/WranglingII/WranglingII_practical.html)<!---, [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)-->|
+|| Wrangling I | [slides](_sessions/Wrangling/Wrangling.html)|[practical](_sessions/Wrangling/Wrangling_practical.html), [solutions](_sessions/Wrangling/Wrangling_practical_solutions.html)|  
+|      | Wrangling II | [slides](_sessions/WranglingII/WranglingII.html) | [practical](_sessions/WranglingII/WranglingII_practical.html), [solutions](_sessions/WranglingII/WranglingII_practical_solutions.html)|
 |25.03.| Recap | | | 
-|| Plotting I | [slides](_sessions/PlottingI/PlottingI.html) | [practical](_sessions/PlottingI/PlottingI_practicaI.html)<!---, [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)-->| 
-|| Plotting II | [slides](_sessions/PlottingII/PlottingII.html) | [practical](_sessions/PlottingII/PlottingII_practical.html)<!---, [solutions](_sessions/PlottingII/PlottingII_practical_solutions.html)-->|
+|| Plotting I | [slides](_sessions/PlottingI/PlottingI.html) | [practical](_sessions/PlottingI/PlottingI_practicaI.html), [solutions](_sessions/PlottingI/PlottingI_practicaI_solutions.html)
+|| Plotting II | [slides](_sessions/PlottingII/PlottingII.html) | [practical](_sessions/PlottingII/PlottingII_practical.html), [solutions](_sessions/PlottingII/PlottingII_practical_solutions.html)|
 |08.04.| Recap | | | 
-|| Plotting III + Competition |[slides](_sessions/PlottingIII/PlottingIII.html)|<!---[Competition](_sessions/PlottingIII/Competition.html)-->| |
+|| Plotting III + Competition |[slides](_sessions/PlottingIII/PlottingIII.html)|[Competition](_sessions/PlottingIII/Competition.html)| |
 ||Intro Finales Projekt||[Avocado](_sessions/Project/Final.html)||
 |29.04.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical](_sessions/LinearModelsI/LinearModelsI_practical.html)<!---, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
 || Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical](_sessions/Reporting/Reporting_practical.html)<!---, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
+|| Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)|||
 |27.05.| Recap | | | 
 || Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | <!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)--->| 
 
-
-
 # Downloads
 
-<h2>[Installation](installation.html)</h2>
+[Installation](installation.html)
 
-<h2>[Project + Datasets + Papers](`r noquote(baselink)`_materials/RDS_Project.zip)</h2>
+[Project + Datasets + Papers](`r noquote(baselink)`_materials/RDS_Project.zip)
 
 # Practicals
 
-Upload bitte in der Form: Gruppe_Practical#XY.zip spätestens bis Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!
+Upload bitte in der Form: Name_Practical#XY.zip spätestens bis Donnerstag 12.00 Uhr Mittag, vor dem nächsten Termin!
 
-Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen!
+Practicals sollen immer alle nötigen Daten, .RProject File und Code beinhalten und problemlos laufen! Am Besten das ganze Projekt Directory als .zip Datei hochladen
 
-[Practical Upload](https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb)
+<h2>[Practical Upload](https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb)</h2>
