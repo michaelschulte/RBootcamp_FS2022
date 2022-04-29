@@ -614,128 +614,6 @@ plt %>%  layout(showlegend = FALSE)
 
 ---
 
-# t-Test
-
-.pull-left4[
-
-<ul>
-  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert mit entweder...</span></li>
-  <ul>
-    <li><span>Einseitig: t<sub>&alpha;</sub></span></li>
-    <li><span>Zweiseitig: t<sub>&alpha;/2</sub></span></li>
-  </ul>
- </ul>
-</ul>
-
-<br>
-
-$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\alpha}$$
-<br>
-
-$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\frac{\alpha}{2}}$$
-
-]
-
-.pull-right5[
-
-```{r, echo = FALSE, fig.width = 3.5, fig.height = 3}
-
-library(tidyverse) ; library(ggrepel)
-
-colTrans = function(col,perc) {
-  rgb(t(grDevices::col2rgb(col)), maxColorValue=255, alpha = perc*255)
-}
-
-par(mar=c(2,1,1,1),mfrow=c(2,1))
-plot.new();plot.window(xlim=c(-6,6),ylim=c(0,.4))
-axis(1,labels = F)
-rect(qt(.95,10),0,6,.15,col=colTrans(colors['magenta'],.2),border=NA)
-
-x = seq(qt(.95,10),6,.01)
-polygon(c(x[1],x,x[1]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
-
-text(qt(.95,10)-.7,.025,labels=expression(alpha))
-text(4,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
-
-x = seq(-6,6,.01)
-lines(x, dt(x, df = 10), lwd=3, col = colors['grey'])
-mtext(c('Einseitig','Dichte','t'),side=c(3,2,1),font=c(2,1,1),line=c(0,0,.5))
-
-
-plot.new();plot.window(xlim=c(-6,6),ylim=c(0,.4))
-axis(1,labels = F)
-rect(-6,0,qt(.025,10),.15,col=colTrans(colors['magenta'],.2),border=NA)
-rect(qt(.975,10),0,6,.15,col=colTrans(colors['magenta'],.2),border=NA)
-
-x = seq(qt(.975,10),6,.01)
-polygon(c(x[1],x,x[1]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
-x = seq(-6,-qt(.975,10),.01)
-polygon(c(x[1],x,x[length(x)]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
-
-text(qt(.975,10)-.7,.025,labels=expression(alpha/2))
-text(qt(.025,10)+.7,.025,labels=expression(alpha/2))
-
-text(-4.11,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
-text(4.1,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
-
-x = seq(-6,6,.01)
-lines(x, dt(x, df = 10), lwd=3, col = colors['grey'])
-mtext(c('Zweiseitig','Dichte','t'),side=c(3,2,1),font=c(2,1,1),line=c(0,0,.5))
-
-```
-
-]
-
----
-
-# t-Test
-
-.pull-left4[
-
-<ul>
-  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert mit entweder...</span></li>
-  <ul>
-    <li><span>Einseitig: t<sub>&alpha;</sub></span></li>
-    <li><span>Zweiseitig: t<sub>&alpha;/2</sub></span></li>
-  </ul>
- </ul>
-</ul>
-
-<br>
-
-$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\alpha}$$
-<br>
-
-$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\frac{\alpha}{2}}$$
-
-]
-
-.pull-right5[
-
-```{r, echo = TRUE}
-# Unterschiede im BIP für länger v. kürzere Besucher?
-tour <- 
-tour %>%
-  mutate(split = case_when(Dauer > median(Dauer) ~ 'laenger',
-                           Dauer <= median(Dauer) ~ 'kuerzer'))
-df <- 
-tour %>%
-  left_join(europa)
-# run test
-t.test(BIP ~ split, data = df)
-
-```
-
-]
-
----
-
-class: middle, center
-
-<h1><a href="">Lineare modelle mit R</a></h1>
-
----
-
 # Formulas
 
 .pull-left4[
@@ -1151,6 +1029,122 @@ predict(naechte_lm)[1:5]
 
 # Get residuals (die ersten 5)
 resid(naechte_lm)[1:5]
+```
+
+]
+
+---
+
+# t-Test
+
+.pull-left4[
+
+<ul>
+  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert mit entweder...</span></li>
+  <ul>
+    <li><span>Einseitig: t<sub>&alpha;</sub></span></li>
+    <li><span>Zweiseitig: t<sub>&alpha;/2</sub></span></li>
+  </ul>
+ </ul>
+</ul>
+
+<br>
+
+$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\alpha}$$
+<br>
+
+$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\frac{\alpha}{2}}$$
+
+]
+
+.pull-right5[
+
+```{r, echo = FALSE, fig.width = 3.5, fig.height = 3}
+
+library(tidyverse) ; library(ggrepel)
+
+colTrans = function(col,perc) {
+  rgb(t(grDevices::col2rgb(col)), maxColorValue=255, alpha = perc*255)
+}
+
+par(mar=c(2,1,1,1),mfrow=c(2,1))
+plot.new();plot.window(xlim=c(-6,6),ylim=c(0,.4))
+axis(1,labels = F)
+rect(qt(.95,10),0,6,.15,col=colTrans(colors['magenta'],.2),border=NA)
+
+x = seq(qt(.95,10),6,.01)
+polygon(c(x[1],x,x[1]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
+
+text(qt(.95,10)-.7,.025,labels=expression(alpha))
+text(4,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
+
+x = seq(-6,6,.01)
+lines(x, dt(x, df = 10), lwd=3, col = colors['grey'])
+mtext(c('Einseitig','Dichte','t'),side=c(3,2,1),font=c(2,1,1),line=c(0,0,.5))
+
+
+plot.new();plot.window(xlim=c(-6,6),ylim=c(0,.4))
+axis(1,labels = F)
+rect(-6,0,qt(.025,10),.15,col=colTrans(colors['magenta'],.2),border=NA)
+rect(qt(.975,10),0,6,.15,col=colTrans(colors['magenta'],.2),border=NA)
+
+x = seq(qt(.975,10),6,.01)
+polygon(c(x[1],x,x[1]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
+x = seq(-6,-qt(.975,10),.01)
+polygon(c(x[1],x,x[length(x)]),c(0,dt(x, df = 10),0),col=colors['magenta'],border=NA)
+
+text(qt(.975,10)-.7,.025,labels=expression(alpha/2))
+text(qt(.025,10)+.7,.025,labels=expression(alpha/2))
+
+text(-4.11,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
+text(4.1,.1,labels=c('Signifikant'),font=2,col='white',cex=1)
+
+x = seq(-6,6,.01)
+lines(x, dt(x, df = 10), lwd=3, col = colors['grey'])
+mtext(c('Zweiseitig','Dichte','t'),side=c(3,2,1),font=c(2,1,1),line=c(0,0,.5))
+
+```
+
+]
+
+---
+
+# t-Test
+
+.pull-left4[
+
+<ul>
+  <li class="m1"><span>Der Test vergleicht den beobachteten t-Wert mit entweder...</span></li>
+  <ul>
+    <li><span>Einseitig: t<sub>&alpha;</sub></span></li>
+    <li><span>Zweiseitig: t<sub>&alpha;/2</sub></span></li>
+  </ul>
+ </ul>
+</ul>
+
+<br>
+
+$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\alpha}$$
+<br>
+
+$$\Large t_\nu=\frac{\beta_j}{\sigma_{\beta_j}}>t_{\nu,\frac{\alpha}{2}}$$
+
+]
+
+.pull-right5[
+
+```{r, echo = TRUE}
+# Unterschiede im BIP für länger v. kürzere Besucher?
+tour <- 
+tour %>%
+  mutate(split = case_when(Dauer > median(Dauer) ~ 'laenger',
+                           Dauer <= median(Dauer) ~ 'kuerzer'))
+df <- 
+tour %>%
+  left_join(europa)
+# run test
+t.test(BIP ~ split, data = df)
+
 ```
 
 ]
