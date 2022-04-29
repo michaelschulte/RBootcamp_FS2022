@@ -1137,10 +1137,10 @@ print2(summary(naechte_lm),15)
 
 
 ```{r, echo = TRUE, eval = FALSE}
-# Zeige gefittete Werte (only first 5)
+# Zeige gefittete Werte (ersten 5)
 predict(naechte_lm)
 
-# Zeige Residualwerte (only first 10)
+# Zeige Residualwerte (ersten 10)
 resid(naechte_lm)
 ```
 
