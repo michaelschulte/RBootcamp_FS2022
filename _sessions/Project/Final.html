@@ -182,13 +182,16 @@ pre code {
 
 
 <p align="center" width="100%">
-<img src="https://chefsmandala.com/wp-content/uploads/2018/03/Avocado.jpg"> <br> <font style="font-size:10px">from: <a href="https://chefsmandala.com/"> Chefsmandala </a></font>
+<img src="https://chefsmandala.com/wp-content/uploads/2018/03/Avocado.jpg">
+<br> <font style="font-size:10px">from:
+<a href="https://chefsmandala.com/"> Chefsmandala </a></font>
 </p>
 <div id="section" class="section level1 tabset">
 <h1 class="tabset"></h1>
 <div id="überblick" class="section level2">
 <h2>Überblick</h2>
-<p>In diesem finalen Projekt wirst du den gesamten Datascience Kreislauf an Hand von neuen Datensätzen durchspielen.</p>
+<p>In diesem finalen Projekt wirst du den gesamten Datascience Kreislauf
+an Hand von neuen Datensätzen durchspielen.</p>
 <p>Du wirst:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Datenaufbereitung</strong></li>
@@ -202,8 +205,14 @@ pre code {
 <li><strong>Fragestellung erarbeiten</strong></li>
 </ol>
 <ul>
-<li>Überleg dir eine Frage, die du mit den Daten beantworten kannst. Wie ist der Zusammenhang zwischen X und Y? Was treibt die Variable X? Gibt es eine bevorzugte Art Avocados? Verändert sich eine Variable im Beobachtungszeitraum?</li>
-<li>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</li>
+<li>Überleg dir eine Frage, die du mit den Daten beantworten kannst. Wie
+ist der Zusammenhang zwischen X und Y? Was treibt die Variable X? Gibt
+es eine bevorzugte Art Avocados? Verändert sich eine Variable im
+Beobachtungszeitraum?</li>
+<li>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage
+beantworten willst, via email an:
+<a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a>
+abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Fragestellung beantworten</strong></li>
@@ -218,9 +227,11 @@ pre code {
 <li><strong>Kommunizieren</strong></li>
 </ol>
 <ul>
-<li>Kurze R-Markdown Präsentation erstellen, in der die Daten erklärt, die Fage präsentiert und dann die Antwort(en) erläutert werden.</li>
+<li>Kurze R-Markdown Präsentation erstellen, in der die Daten erklärt,
+die Fage präsentiert und dann die Antwort(en) erläutert werden.</li>
 <li>Präsentation im Kurs vorstellen (<strong>27.05.22</strong>)</li>
-<li>Code + Markdown Präsentation abgeben (<strong>26.05.22</strong>, high noon)</li>
+<li>Code + Markdown Präsentation abgeben (<strong>26.05.22</strong>,
+high noon)</li>
 </ul>
 </div>
 <div id="aufgaben" class="section level2">
@@ -228,63 +239,103 @@ pre code {
 <div id="a---setup" class="section level3">
 <h3>A - Setup</h3>
 <ol style="list-style-type: decimal">
-<li><p>Öffne dein <code>TheRBootcamp</code> R Projekt. Es sollte die Ordner <code>1_Data</code> und <code>2_Code</code> enthalten. Stelle sicher, dass du alle Datensätze, welche im <code>Datensätze</code> Tab aufgelisted sind, in deinem <code>1_Data</code> Ordner hast.</p></li>
-<li><p>Öffne ein neues R Skript. Schreibe deinen Namen, das Datum und “Final_Project” als Kommentare an den Anfang des Skripts.</p></li>
+<li><p>Öffne dein <code>TheRBootcamp</code> R Projekt. Es sollte die
+Ordner <code>1_Data</code> und <code>2_Code</code> enthalten. Stelle
+sicher, dass du alle Datensätze, welche im <code>Datensätze</code> Tab
+aufgelisted sind, in deinem <code>1_Data</code> Ordner hast.</p></li>
+<li><p>Öffne ein neues R Skript. Schreibe deinen Namen, das Datum und
+“Final_Project” als Kommentare an den Anfang des Skripts.</p></li>
 </ol>
 <pre class="r"><code>## NAME
 ## DATUM
 ## Final Project</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Speichere das neue Skript unter dem Namen <code>Final_Project.R</code> im <code>2_Code</code> Ordner.</p></li>
+<li><p>Speichere das neue Skript unter dem Namen
+<code>Final_Project.R</code> im <code>2_Code</code> Ordner.</p></li>
 <li><p>Lade die nötigen Pakete (zB: Tidyverse)</p></li>
 </ol>
 </div>
 <div id="b---lade-die-datensätze" class="section level3">
 <h3>B - Lade die Datensätze</h3>
 <ol style="list-style-type: decimal">
-<li><p>Lese die Datensätze (siehe Reiter ‘Datensätze’) in die Objekte <code>prices</code> und <code>sales</code> ein.</p></li>
-<li><p>Printe den Datensatz. Wurden alle Variablentypen korrekt identifiziert?</p></li>
-<li><p>Verwende <code>summary()</code> um einen weiteren Überblick über die Daten zu bekommen.</p></li>
-<li><p>Füge einen Überblick (Slide Nummer 2 (nach Titelslide)) über die Datensätze am Anfang deiner Präsentation ein!</p></li>
+<li><p>Lese die Datensätze (siehe Reiter ‘Datensätze’) in die Objekte
+<code>prices</code> und <code>sales</code> ein.</p></li>
+<li><p>Printe den Datensatz. Wurden alle Variablentypen korrekt
+identifiziert?</p></li>
+<li><p>Verwende <code>summary()</code> um einen weiteren Überblick über
+die Daten zu bekommen.</p></li>
+<li><p>Füge einen Überblick (Slide Nummer 2 (nach Titelslide)) über die
+Datensätze am Anfang deiner Präsentation ein!</p></li>
 </ol>
 </div>
 <div id="c---datensätze-säubern" class="section level3">
 <h3>C - Datensätze säubern</h3>
 <ol style="list-style-type: decimal">
-<li><p>Verwende <code>names()</code> um die Spaltennamen anzuzeigen.</p></li>
-<li><p>Passe die Spaltennamen an die Vorgabe unter ‘Datensätze’ - Berschreibung an</p></li>
+<li><p>Verwende <code>names()</code> um die Spaltennamen
+anzuzeigen.</p></li>
+<li><p>Passe die Spaltennamen an die Vorgabe unter ‘Datensätze’ -
+Berschreibung an</p></li>
 <li><p>Sind die Datensätze tidy?</p></li>
-<li><p>Fusioniere die Datensätze in einen Datensatz <code>avocado</code>.</p></li>
+<li><p>Fusioniere die Datensätze in einen Datensatz
+<code>avocado</code>.</p></li>
 </ol>
 </div>
 <div id="d---fragestellung-erarbeiten" class="section level3">
 <h3>D - Fragestellung erarbeiten</h3>
 <ol style="list-style-type: decimal">
-<li><p>Überleg dir eine Frage, die du mit den Daten beantworten kannst. Wie ist der Zusammenhang zwischen X und Y? Was treibt die Variable X? Gibt es eine bevorzugte Art Avocados? Verändert sich eine Variable im Beobachtungszeitraum?</p></li>
+<li><p>Überleg dir eine Frage, die du mit den Daten beantworten kannst.
+Wie ist der Zusammenhang zwischen X und Y? Was treibt die Variable X?
+Gibt es eine bevorzugte Art Avocados? Verändert sich eine Variable im
+Beobachtungszeitraum?</p></li>
 <li><p>Fragestellung kommt auf den Slide Nummer 3.</p></li>
-<li><p>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage beantworten willst, via email an: <a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a> abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</p></li>
+<li><p>Fragestellung abgeben (Frage + grobe Skizze wie du die Frage
+beantworten willst, via email an:
+<a href="mailto:michael.schulte@unibe.ch">michael.schulte@unibe.ch</a>
+abgeben (<strong>28.04.22</strong>, 12.00 Uhr (high noon))</p></li>
 </ol>
 </div>
 <div id="e---fragestellung-beantworten" class="section level3">
 <h3>E - Fragestellung beantworten</h3>
 <ol style="list-style-type: decimal">
-<li>Beantworte deine Fragestellung mit all den verschiedenen Ansätzen, die wir im Kurs durchgemacht haben - Tabellen, Grafiken, Statistik (deskriptiv und Inferenz (Bonus)).</li>
+<li>Beantworte deine Fragestellung mit all den verschiedenen Ansätzen,
+die wir im Kurs durchgemacht haben - Tabellen, Grafiken, Statistik
+(deskriptiv und Inferenz (Bonus)).</li>
 </ol>
 </div>
 <div id="f---kommunizieren" class="section level3">
 <h3>F - Kommunizieren</h3>
 <ol style="list-style-type: decimal">
-<li><p>Öffne ein neues R-Markdown Skript - Presentation - HTML (ioslides). Schreibe deinen Gruppennamen, das Datum und “Final Project” als Information für den Titelslide.</p></li>
-<li><p>Speichere dein R-Markdown Skript in das gleiche Verzeichnis wie dein .RProj File mit Gruppenname_Project.Rmd</p></li>
-<li><p>Erstelle einen Überblicksslide für den <code>avocado</code> Datensatz.</p></li>
-<li><p>Erstelle einen Slide mit der Fragestellung</p></li>
-<li><p>Erstelle Slides für die Beantwortung der Fragestellung (Tabellen, deskriptive Statistiken, Grafiken) (max 10!)</p></li>
+<li><p>Öffne ein neues R-Markdown Skript - Presentation - HTML
+(ioslides). Schreibe deinen Gruppennamen, das Datum und “Final Project”
+als Information für den Titelslide.</p></li>
+<li><p>Speichere dein R-Markdown Skript in das gleiche Verzeichnis wie
+dein .RProj File mit Gruppenname_Project.Rmd</p></li>
+<li><p>Erstelle folgende Slides:</p></li>
+</ol>
+<ul>
+<li>einen Überblicksslide für den <code>avocado</code> Datensatz</li>
+<li>einen Slide mit deskriptiven Statistiken zu den Datensätzen</li>
+<li>einen Slide mit der Fragestellung</li>
+<li>mehrere Slides für die Beantwortung der Fragestellung (Tabellen,
+deskriptive Statistiken, Grafiken)</li>
+<li>einen Slides Executive Summary</li>
+<li>einen Slide: ‘Wish I knew this before!’</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><p><em>Maximal Anzahl Slides 12!</em></p></li>
+<li><p>Abgabe via regulärem Practicals
+<a href = 'https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb'>link</a></p></li>
 </ol>
 </div>
 </div>
 <div id="datensätze" class="section level2">
 <h2>Datensätze</h2>
-<p>Die beiden Datensätze beinhalten Daten über die Verkaufszahlen von Avocados der Firma Hass. In <code>prices.csv</code> werden durchschnittliche Preise der Avocados und die Verkaufsregion gelistet, in <code>sales.csv</code> die die Grösse der Avocados genauer unterteilt, hier finden sich auch Informationen über die Grösse der Säcke, in denen die Avocados verkauft werden.</p>
+<p>Die beiden Datensätze beinhalten Daten über die Verkaufszahlen von
+Avocados der Firma Hass. In <code>prices.csv</code> werden
+durchschnittliche Preise der Avocados und die Verkaufsregion gelistet,
+in <code>sales.csv</code> die die Grösse der Avocados genauer
+unterteilt, hier finden sich auch Informationen über die Grösse der
+Säcke, in denen die Avocados verkauft werden.</p>
 <table>
 <colgroup>
 <col width="20%" />
@@ -302,16 +353,20 @@ pre code {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/1_Data/prices.csv?raw=true">prices.csv</a></td>
+<td align="left"><a
+href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/1_Data/prices.csv?raw=true">prices.csv</a></td>
 <td align="left">18249</td>
 <td align="left">5</td>
-<td align="left">Datensatz zu den Avocado-Preisen der Firma Hass in verschiedenen amerikanischen Staaten</td>
+<td align="left">Datensatz zu den Avocado-Preisen der Firma Hass in
+verschiedenen amerikanischen Staaten</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/1_Data/sales.csv?raw=true">sales.csv</a></td>
+<td align="left"><a
+href="https://github.com/michaelschulte/RBootcamp_FS2021/blob/master/1_Data/sales.csv?raw=true">sales.csv</a></td>
 <td align="left">18249</td>
 <td align="left">10</td>
-<td align="left">Datensatz zu den Avocado Verkaufszahlen der Firma Hass in verschiedenen amerikanischen Staaten</td>
+<td align="left">Datensatz zu den Avocado Verkaufszahlen der Firma Hass
+in verschiedenen amerikanischen Staaten</td>
 </tr>
 </tbody>
 </table>
@@ -491,6 +546,10 @@ pre code {
 </tbody>
 </table>
 <table>
+<colgroup>
+<col width="23%" />
+<col width="76%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -528,7 +587,8 @@ pre code {
 </tr>
 <tr class="even">
 <td align="left">SmallMediumAvocado</td>
-<td align="left">Small/Medium Hass Avocado (~3-5oz avocado) Typ #4046</td>
+<td align="left">Small/Medium Hass Avocado (~3-5oz avocado) Typ
+#4046</td>
 </tr>
 <tr class="odd">
 <td align="left">LargeAvocado</td>
@@ -536,13 +596,17 @@ pre code {
 </tr>
 <tr class="even">
 <td align="left">ExtraLargeAvocado</td>
-<td align="left">Extra Large Hass Avocado (~10-15oz avocado) Typ #4770</td>
+<td align="left">Extra Large Hass Avocado (~10-15oz avocado) Typ
+#4770</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="beispiel-der-verkaufszahlen-für-den-avocado-typ-4225-ganzer-us-markt" class="section level4">
-<h4>Beispiel der Verkaufszahlen für den Avocado Typ 4225 (ganzer US Markt)</h4>
+<div
+id="beispiel-der-verkaufszahlen-für-den-avocado-typ-4225-ganzer-us-markt"
+class="section level4">
+<h4>Beispiel der Verkaufszahlen für den Avocado Typ 4225 (ganzer US
+Markt)</h4>
 <p><img src="Final_files/figure-html/unnamed-chunk-7-1.png" width="576" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -637,19 +701,29 @@ pre code {
 <h2>Resourcen</h2>
 <div id="dplyr-vignette" class="section level3">
 <h3><code>dplyr</code> vignette</h3>
-<p>Siehe die <code>dplyr</code> <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html"><strong>vignette</strong></a>.</p>
+<p>Siehe die <code>dplyr</code> <a
+href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html"><strong>vignette</strong></a>.</p>
 </div>
 <div id="stringr-vignette" class="section level3">
 <h3><code>stringr</code> vignette</h3>
-<p>Siehe die <code>stringr</code> <a href="https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html"><strong>vignette</strong></a>.</p>
+<p>Siehe die <code>stringr</code> <a
+href="https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html"><strong>vignette</strong></a>.</p>
 </div>
 <div id="cheatsheet" class="section level3">
 <h3>Cheatsheet</h3>
 <p align="center" width="100%">
-<a href="image/data-wrangling-cheatsheet.pdf" download> <img src="image/wrangling_cheat.jpg" style="width:70%"></a> <br> <font style="font-size:10px">from <a href="https://www.rstudio.com/resources/cheatsheets/">R Studio</a></font>
+<a href="image/data-wrangling-cheatsheet.pdf" download>
+<img src="image/wrangling_cheat.jpg" style="width:70%"></a> <br>
+<font style="font-size:10px">from
+<a href="https://www.rstudio.com/resources/cheatsheets/">R
+Studio</a></font>
 </p>
 <p align="center" width="100%">
-<a href="image/strings.pdf" download> <img src="image/stringr.png" style="width:70%"></a> <br> <font style="font-size:10px">from <a href="https://github.com/rstudio/cheatsheets/blob/master/strings.pdf">R Studio</a></font>
+<a href="image/strings.pdf" download>
+<img src="image/stringr.png" style="width:70%"></a> <br>
+<font style="font-size:10px">from
+<a href="https://github.com/rstudio/cheatsheets/blob/master/strings.pdf">R
+Studio</a></font>
 </p>
 </div>
 </div>

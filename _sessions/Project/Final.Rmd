@@ -140,11 +140,18 @@ sales <- read_csv('1_Data/sales.csv')
 
 2. Speichere dein R-Markdown Skript in das gleiche Verzeichnis wie dein .RProj File mit Gruppenname_Project.Rmd
 
-3. Erstelle einen Überblicksslide für den `avocado` Datensatz.
+3. Erstelle folgende Slides:
 
-4. Erstelle einen Slide mit der Fragestellung
+- einen Überblicksslide für den `avocado` Datensatz
+- einen Slide mit deskriptiven Statistiken zu den Datensätzen
+- einen Slide mit der Fragestellung
+- mehrere Slides für die Beantwortung der Fragestellung (Tabellen, deskriptive Statistiken, Grafiken) 
+- einen Slides Executive Summary
+- einen Slide: 'Wish I knew this before!'
 
-5. Erstelle Slides für die Beantwortung der Fragestellung (Tabellen, deskriptive Statistiken, Grafiken) (max 10!)
+4. *Maximal Anzahl Slides 12!*
+
+5. Abgabe via regulärem Practicals <a href = 'https://www.dropbox.com/request/yKJIygRY1BZkpOj3ljMb'>link</a>
 
 ## Datensätze
 
