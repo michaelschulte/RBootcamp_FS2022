@@ -1,5 +1,25 @@
 # Recaps
 
+# Recap
+
+## Create Project
+## Console as calculator
+
+## Open and save new script
+- generate vector
+- add stuff
+- overwrite
+- average 
+- Use na.rm argument
+
+## load and save data
+- packages!
+- sleep
+- sleep$age[age]
+- which(sleep$age > 50)
+- mean(sleep$alchohol[which(sleep$age > 50)], na.rm = TRUE)
+
+
 # Session 1 Intro + Data
 
 - vector with numbers and assignment
@@ -63,3 +83,28 @@ library(ggthemes)
 
 facet_grid(gender ~ .)
 patchwork
+
+# Session 4 Linear Models
+
+library(tidyverse)
+
+mpg
+cor(mpg$cty, mpg$hwy)
+cor(mpg$cyl, mpg$hwy)
+cor.test(mpg$cyl, mpg$hwy)
+
+model <- 
+mpg %>%
+  select_if(is.numeric) %>%
+lm(cty ~ ., data = .)
+
+summary(model)
+
+ggplot(aes(cty, hwy), data = mpg) + 
+  geom_point() +
+  geom_smooth(method = 'lm')
+
+predict(model)
+resid(model)
+
+t.test(cty ~ year, data = mpg)

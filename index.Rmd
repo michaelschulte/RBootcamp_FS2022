@@ -29,11 +29,11 @@ source("_sessions/baselink.R")
 |08.04.| Recap | | | 
 || Plotting III + Competition |[slides](_sessions/PlottingIII/PlottingIII.html)|[Competition](_sessions/PlottingIII/Competition.html)| |
 ||Intro Finales Projekt||[Avocado](_sessions/Project/Final.html)||
-|29.04.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical](_sessions/LinearModelsI/LinearModelsI_practical.html)<!---, [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)-->| |
-|| Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical](_sessions/Reporting/Reporting_practical.html)<!---, [solutions](_sessions/Reporting/Reporting_practical_solutions.html)-->||
+|29.04.| Lineare Modelle |[slides](_sessions/LinearModelsI/LinearModelsI.html)| [practical](_sessions/LinearModelsI/LinearModelsI_practical.html), [solutions](_sessions/LinearModelsI/LinearModelsI_practical_solutions.html)| |
+|| Reporting | [slides](_sessions/Reporting/Reporting.html)| [practical](_sessions/Reporting/Reporting_practical.html), [solutions](_sessions/Reporting/Reporting_practical_solutions.html)||
 || Evaluation | [Eval-Fragebogen](https://scanserveruls.unibe.ch/evasys/online.php?pswd=LT1PR)|||
 |27.05.| Recap | | | 
-|| Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | <!---[feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://www.dropbox.com/s/lin8heqvmcemyxd/FS21-Seminar_Datascience_mit_R_lernen.pdf?dl=0)--->| 
+|| Projektpräsentationen |[Next steps](_sessions/NextSteps/NextSteps.html) | [feedback](https://forms.gle/38LagXxyH2cMHynt8), [evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html)| 
 
 # Downloads
 

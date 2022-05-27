@@ -1,0 +1,70 @@
+---
+title: "Feedback Finales Projekt"
+author: "MSM"
+date: '2022-05-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+library(tidyverse)
+library(googlesheets4)
+library(lubridate)
+
+limit_year <- 2022
+```
+
+```{r}
+
+raw <- read_sheet("https://docs.google.com/spreadsheets/d/1oTizDKD79odNgjSe4J_nlF-mx-X2V8qDR_vtTWUDjqY/edit?usp=sharing") %>%
+  mutate(year = year(Timestamp)) %>%
+  filter(year == limit_year)
+  select(-year) %>%
+rename(Fragestellung = "Die Fragestellung wurde beantwortet.",
+       Ergebnisse = "Die Ergebnisse wurden verständlich präsentiert.",
+       Aufbereitung = "Die grafische Aufbereitung der Ergebnisse war",
+       Note = "Nach dem Schulnotensystem würde ich der Gruppe die folgende Note geben:",
+       Gruppe = "Bitte die Gruppe auswählen",
+       Verbal = "Hier noch die Möglichkeit für verbales Feedback an die Gruppe:") 
+
+raw_means <- 
+  raw %>%
+  group_by(Gruppe) %>%
+  summarise_if(is.numeric, mean, na.rm = TRUE)
+```
+
+## Evaluation der Peers
+
+### Skalen Feedback
+
+Beurteilung auf 3 Fragen (10 Punkte Skala)
+
+- Fragestellung = "Die Fragestellung wurde beantwortet.",
+- Ergebnisse = "Die Ergebnisse wurden verständlich präsentiert.",
+- Aufbereitung = "Die grafische Aufbereitung der Ergebnisse war.",
+
+Sowie Note [1:6]
+
+- Note = "Nach dem Schulnotensystem würde ich der Gruppe die folgende Note geben."
+
+```{r}
+raw_means %>%
+  pivot_longer(!Gruppe, names_to = 'Frage', values_to = 'average') %>%
+  ggplot(aes(Frage, average)) +
+  geom_point(stat = 'identity') +
+  facet_grid(Gruppe ~ .) +
+  theme_bw(base_size = 12) +
+  labs(y = 'Mittelwert',
+       x = 'Beurteilung')
+```
+
+### Textfeedback
+
+```{r}
+raw %>%
+  select(Gruppe, Verbal) %>%
+  table()
+```
+

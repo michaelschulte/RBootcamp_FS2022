@@ -28,11 +28,10 @@ library(tidyverse)
 ---
 # Präsentationen heute
 
-
-
-- XXX (Fragen: XXX)
-- XXX (Fragen: XXX)
-- XXX (Fragen: XXX)
+- Data Pirates (Fragen: We_R_Nerds)
+- We_R_Nerds (Fragen: U_R_QL)
+- U_R_QL (Fragen: RGo)
+- RGo (Fragen: Data Pirates)
 
 Anonymes [Feedback](https://forms.gle/38LagXxyH2cMHynt8)
 
@@ -189,7 +188,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 ---
 class: center, middle
 
-# Feedback
+# [Evaluation](https://ilias.unibe.ch/goto_ilias3_unibe_file_2447103_download.html) / Feedback
 
 ---
 
